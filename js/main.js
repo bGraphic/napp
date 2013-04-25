@@ -4,14 +4,6 @@ $(function() {
 
     Parse.initialize("zdothuhw5y2TiDtKyOb20IHIAcWDIRuZwnCVjHIf", "o4vTVCro9Rwr7RbbKa8FTzVFwBOM1CipFDBBi9C2");
 
-    var arter = [
-        { name: "Torsk" },
-        { name: "Laks" },
-        { name: "Sei " },
-        { name: "Reker" }
-    ];
-
-
     var Seafood = Parse.Object.extend("Seafood", {
 
     });
@@ -41,7 +33,9 @@ $(function() {
 
             $("#seafood-info").html("");
             $("#seafood-info").append(seafoodInfo.render().el);
+
             $("#main-info").hide();
+
             $("#seafood-info").show();
         }
     });
