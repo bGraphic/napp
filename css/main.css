@@ -1,18 +1,10 @@
+#header {
+    padding-top: 40px;
+}
+
 #seafood-collection li a {
     line-height: 200%;
     padding-left: 20px;
-}
-
-.red {
-   color: #b94a48;
-}
-
-.orange {
-    color: #c09853;
-}
-
-.green {
-    color: #468847;
 }
 
 #seafood-collection li .icon {
@@ -41,5 +33,17 @@
 
 .info.well {
     padding: 40px;
+}
+
+.red {
+    color: #b94a48;
+}
+
+.orange {
+    color: #c09853;
+}
+
+.green {
+    color: #468847;
 }
 
