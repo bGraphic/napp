@@ -14,6 +14,7 @@ $(function() {
 
     var SeafoodView = Parse.View.extend({
         tagName: "li",
+
         template: _.template($('#seafoodItemTemplate').html()),
 
         events: {

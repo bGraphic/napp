@@ -60,17 +60,17 @@
                             </p>
 
                             <dl>
-                                <dt class="text-success">Grønn</dt>
+                                <dt class="green">Grønn</dt>
                                 <dd>
                                     Disse artene høstes på en bærekraftig måte og kan spises med god samvittighet.
                                 </dd>
 
-                                <dt class="text-warning">Oransj</dt>
+                                <dt class="orange">Oransj</dt>
                                 <dd>
                                     Disse artene høstes stort sett på en bærekraftig måte. Fangstmetoder og områder kan være av betydning for miljøvennlighet. Se detaljopplysninger for arten.
                                 </dd>
 
-                                <dt class="text-error">Rød</dt>
+                                <dt class="red">Rød</dt>
                                 <dd>
                                     Disse artene er sårbare for populasjonsreduksjoner eller høstes på en lite bærekraftig måte.
                                 </dd>
@@ -89,7 +89,7 @@
         <!-- Template -->
 
         <script id="seafoodItemTemplate" type="text/template">
-            <a><%= name %> <span class="icon"><i class="icon-chevron-right"></i></span> </a>
+            <a class="<%= status %>"><%= name %> <span class="icon"><i class="icon-chevron-right"></i></span> </a>
         </script>
 
         <script id="seafoodInfoTemplate" type="text/template">
