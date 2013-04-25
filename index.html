@@ -102,7 +102,6 @@
                 <% if (quote_thanks) { %>
                     <small><%= quote_thanks %></small>
                 <% } %>
-
             </blockquote>
 
             <p>
@@ -113,9 +112,17 @@
                 <%= name %> er på den <%= status %> listen.
             </p>
 
+            <% if (env_status) { %>
             <p>
                 <%= name %> er et <%= env_status %> klimavalg.
             </p>
+            <% } %>
+
+            <% if (img_src) { %>
+            <p>
+                <img src="http://napp.marinbiologene.no/images/art/<%= img_src %>" class="img-polaroid"/>
+            <p>
+            <% } %>
 
         </script>
 
