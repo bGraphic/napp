@@ -44,39 +44,40 @@
 
             </div>
             <div class="span7">
-                <article id="info" class="well">
-                    <p class="lead">Skrive en kul intro tekst som forklarer hva dette er og hvorfor det er viktig!</p>
-                    <p>Skrive litt mer</p>
+                <div id="info" class="well">
+                    <article>
+                        <p class="lead">Skrive en kul intro tekst som forklarer hva dette er og hvorfor det er viktig!</p>
+                        <p>Skrive litt mer</p>
 
-                    <div>
-                        <h3>Om listen</h3>
+                        <div>
+                            <h3>Om listen</h3>
 
-                        <p>Listen er laget av Marinbiologene basert på en kombinasjon av WWFs sjømatguide og infromasjon fra ICES (Det internasjonale havforskerrådet) og MSC(Marine Stewardship Council).
-                        </p>
+                            <p>Listen er laget av Marinbiologene basert på en kombinasjon av WWFs sjømatguide og infromasjon fra ICES (Det internasjonale havforskerrådet) og MSC(Marine Stewardship Council).
+                            </p>
 
-                        <dl>
-                            <dt class="text-success">Grønn</dt>
-                            <dd>
-                                Disse artene høstes på en bærekraftig måte og kan spises med god samvittighet.
-                            </dd>
+                            <dl>
+                                <dt class="text-success">Grønn</dt>
+                                <dd>
+                                    Disse artene høstes på en bærekraftig måte og kan spises med god samvittighet.
+                                </dd>
 
-                            <dt class="text-warning">Oransj</dt>
-                            <dd>
-                                Disse artene høstes stort sett på en bærekraftig måte. Fangstmetoder og områder kan være av betydning for miljøvennlighet. Se detaljopplysninger for arten.
-                            </dd>
+                                <dt class="text-warning">Oransj</dt>
+                                <dd>
+                                    Disse artene høstes stort sett på en bærekraftig måte. Fangstmetoder og områder kan være av betydning for miljøvennlighet. Se detaljopplysninger for arten.
+                                </dd>
 
-                            <dt class="text-error">Rød</dt>
-                            <dd>
-                                Disse artene er sårbare for populasjonsreduksjoner eller høstes på en lite bærekraftig måte.
-                            </dd>
-                        </dl>
+                                <dt class="text-error">Rød</dt>
+                                <dd>
+                                    Disse artene er sårbare for populasjonsreduksjoner eller høstes på en lite bærekraftig måte.
+                                </dd>
+                            </dl>
 
-                        <p>Marinbiologene tar gjerne imot innspill og kommentarer til listen på: <a rel="external" href=" mailto:info@marinbiologene.no" class="ui-link">info@marinbiologene.no</a>.</p>
-                        <p>Send gjerne inn forslag til huskeregler også ;-)</p>
+                            <p>Marinbiologene tar gjerne imot innspill og kommentarer til listen på: <a rel="external" href=" mailto:info@marinbiologene.no" class="ui-link">info@marinbiologene.no</a>.</p>
+                            <p>Send gjerne inn forslag til huskeregler også ;-)</p>
 
-                    </div>
-
-                </article>
+                        </div>
+                    </article>
+                </div>
             </div>
         </div>
         </div>
@@ -85,6 +86,29 @@
 
         <script id="seafoodItemTemplate" type="text/template">
             <a href=""><%= name %> <span class="icon"><i class="icon-chevron-right"></i></span> </a>
+        </script>
+
+        <script id="seafoodInfoTemplate" type="text/template">
+            <header>
+                <h2><%= name %></h2>
+            </header>
+
+            <blockquote>
+                <%= quote %>
+            </blockquote>
+
+            <p>
+                <%= comment %>
+            </p>
+
+            <p>
+                Blåskjell er på den <%= status %> listen.
+            </p>
+
+            <p>
+                Blåskjell er et <%= env_status %> klimavalg.
+            </p>
+
         </script>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>

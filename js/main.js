@@ -30,10 +30,23 @@ $(function() {
         }
     });
 
+    var SeafoodInfoView = Parse.View.extend({
+        tagName: "article",
+
+        template: _.template($('#seafoodInfoTemplate').html()),
+
+        render: function () {
+            this.$el.html(this.template(this.model.toJSON()));
+            return this;
+        }
+    });
+
     var SeafoodDirectoryView = Parse.View.extend({
         el: $("#seafood-collection"),
 
         initialize: function () {
+            var self = this;
+
             _.bindAll(this, 'addOneSeafood', 'addAllSeafoods' );
 
             this.seafoodCollection = new SeafoodCollection();
@@ -56,6 +69,6 @@ $(function() {
         }
     });
 
-    var directory = new SeafoodDirectoryView();
+    var directory = new SeafoodDirectoryView("test");
 
 });

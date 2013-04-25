@@ -4,8 +4,8 @@
     <list default="true" id="3fcd1948-1891-4639-9bb1-12ca54c98622" name="Default" comment="" />
     <ignored path="napp.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/index.html" changelist="3fcd1948-1891-4639-9bb1-12ca54c98622" time="1366921480824" ignored="false" />
-    <file path="/main.js" changelist="3fcd1948-1891-4639-9bb1-12ca54c98622" time="1366917270800" ignored="false" />
+    <file path="/index.html" changelist="3fcd1948-1891-4639-9bb1-12ca54c98622" time="1366922252791" ignored="false" />
+    <file path="/main.js" changelist="3fcd1948-1891-4639-9bb1-12ca54c98622" time="1366923091624" ignored="false" />
     <file path="/main.css" changelist="3fcd1948-1891-4639-9bb1-12ca54c98622" time="1366921302390" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,7 +29,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="85" column="39" selection-start="3621" selection-end="3640" vertical-scroll-proportion="-9.041667">
+            <state line="55" column="17" selection-start="2344" selection-end="2344" vertical-scroll-proportion="-9.666667">
               <folding />
             </state>
           </provider>
@@ -38,7 +38,7 @@
       <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="52" selection-start="546" selection-end="546" vertical-scroll-proportion="0.5590062">
+            <state line="55" column="43" selection-start="1438" selection-end="1438" vertical-scroll-proportion="0.97670805">
               <folding />
             </state>
           </provider>
@@ -202,6 +202,23 @@
     <list size="0" />
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="sslv3">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="3fcd1948-1891-4639-9bb1-12ca54c98622" name="Default" comment="" />
@@ -323,14 +340,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="39" selection-start="3621" selection-end="3640" vertical-scroll-proportion="-9.041667">
+        <state line="55" column="17" selection-start="2344" selection-end="2344" vertical-scroll-proportion="-9.666667">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="52" selection-start="546" selection-end="546" vertical-scroll-proportion="0.5590062">
+        <state line="55" column="43" selection-start="1438" selection-end="1438" vertical-scroll-proportion="0.97670805">
           <folding />
         </state>
       </provider>
