@@ -22,7 +22,7 @@ $(function() {
 
     var SeafoodView = Parse.View.extend({
         tagName: "li",
-        template: _.template($('#artTemplate').html()),
+        template: _.template($('#seafoodItemTemplate').html()),
 
         render: function () {
             this.$el.html(this.template(this.model.toJSON()));
