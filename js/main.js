@@ -24,9 +24,25 @@ $(function() {
         tagName: "li",
         template: _.template($('#seafoodItemTemplate').html()),
 
+        events: {
+            "click a" : "viewInfo"
+        },
+
         render: function () {
             this.$el.html(this.template(this.model.toJSON()));
             return this;
+        },
+
+        viewInfo: function () {
+
+            var seafoodInfo = new SeafoodInfoView({
+                model: this.model
+            });
+
+            $("#seafood-info").html("");
+            $("#seafood-info").append(seafoodInfo.render().el);
+            $("#main-info").hide();
+            $("#seafood-info").show();
         }
     });
 

@@ -44,7 +44,11 @@
 
             </div>
             <div class="span7">
-                <div id="info" class="well">
+                <div id="seafood-info" class="well">
+
+                </div>
+
+                <div id="main-info" class="well">
                     <article>
                         <p class="lead">Skrive en kul intro tekst som forklarer hva dette er og hvorfor det er viktig!</p>
                         <p>Skrive litt mer</p>
@@ -85,7 +89,7 @@
         <!-- Template -->
 
         <script id="seafoodItemTemplate" type="text/template">
-            <a href=""><%= name %> <span class="icon"><i class="icon-chevron-right"></i></span> </a>
+            <a><%= name %> <span class="icon"><i class="icon-chevron-right"></i></span> </a>
         </script>
 
         <script id="seafoodInfoTemplate" type="text/template">
@@ -95,6 +99,10 @@
 
             <blockquote>
                 <%= quote %>
+                <% if (quote_thanks) { %>
+                    <small><%= quote_thanks %></small>
+                <% } %>
+
             </blockquote>
 
             <p>
@@ -102,11 +110,11 @@
             </p>
 
             <p>
-                Blåskjell er på den <%= status %> listen.
+                <%= name %> er på den <%= status %> listen.
             </p>
 
             <p>
-                Blåskjell er et <%= env_status %> klimavalg.
+                <%= name %> er et <%= env_status %> klimavalg.
             </p>
 
         </script>
