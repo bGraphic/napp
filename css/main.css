@@ -1,0 +1,27 @@
+#seafood-collection {
+    width: 380px;
+}
+
+#seafood-collection.affix {
+    top: 40px;
+}
+
+#seafood-collection i {
+    float: right;
+    opacity: .25;
+}
+
+/* Large desktop */
+@media (min-width: 1200px) {
+    #seafood-collection {
+        width: 470px;
+    }
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+    #seafood-collection {
+        width: 290px;
+    }
+}
+
