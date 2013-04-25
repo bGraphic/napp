@@ -1,27 +1,24 @@
-#seafood-collection {
-    width: 380px;
+#seafood-collection li a {
+    line-height: 200%;
+    padding-left: 20px;
 }
 
-#seafood-collection.affix {
-    top: 40px;
-}
-
-#seafood-collection i {
+#seafood-collection li .icon {
     float: right;
-    opacity: .25;
+    opacity: 0.25;
 }
 
-/* Large desktop */
-@media (min-width: 1200px) {
-    #seafood-collection {
-        width: 470px;
-    }
+#seafood-collection li .icon i {
+    vertical-align: middle;
 }
 
-/* Portrait tablet to landscape and desktop */
-@media (min-width: 768px) and (max-width: 979px) {
-    #seafood-collection {
-        width: 290px;
-    }
+#seafood-collection li img.spinner {
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+}
+
+#info {
+    padding: 20px;
 }
 

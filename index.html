@@ -39,13 +39,12 @@
             <div class="span5">
 
                 <ul id="seafood-collection" class="nav nav-tabs nav-stacked">
-                    Loading
+                    <li><img class="spinner" src="img/spinner.gif"></li>
                 </ul>
 
             </div>
             <div class="span7">
-                <article>
-
+                <article id="info" class="well">
                     <p class="lead">Skrive en kul intro tekst som forklarer hva dette er og hvorfor det er viktig!</p>
                     <p>Skrive litt mer</p>
 
@@ -86,7 +85,7 @@
 
         <script id="artTemplate" type="text/template">
 
-            <a href=""><%= name %> <i class="icon-chevron-right"></i></a>
+            <a href=""><%= name %> <span class="icon"><i class="icon-chevron-right"></i></span> </a>
         </script>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
