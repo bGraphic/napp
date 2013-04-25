@@ -22,3 +22,12 @@
     display: none;
 }
 
+#seafood-info button.close {
+    margin-top: -40px;
+    margin-right: -20px;
+}
+
+.info.well {
+    padding: 40px;
+}
+

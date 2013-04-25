@@ -17,7 +17,7 @@ $(function() {
         template: _.template($('#seafoodItemTemplate').html()),
 
         events: {
-            "click a" : "viewInfo"
+            "click a" : "viewSeafoodInfo"
         },
 
         render: function () {
@@ -25,7 +25,7 @@ $(function() {
             return this;
         },
 
-        viewInfo: function () {
+        viewSeafoodInfo: function () {
 
             var seafoodInfo = new SeafoodInfoView({
                 model: this.model
@@ -45,10 +45,21 @@ $(function() {
 
         template: _.template($('#seafoodInfoTemplate').html()),
 
+        events: {
+            "click button" : "closeSeafoodInfo"
+        },
+
         render: function () {
             this.$el.html(this.template(this.model.toJSON()));
             return this;
+        },
+
+        closeSeafoodInfo: function () {
+
+            $("#main-info").show();
+            $("#seafood-info").hide();
         }
+
     });
 
     var SeafoodDirectoryView = Parse.View.extend({
