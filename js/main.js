@@ -87,6 +87,10 @@ $(function() {
             this.seafoodCollection.bind("add", this.addOneSeafood);
             this.seafoodCollection.bind("reset", this.addAllSeafoods);
 
+            this.seafoodCollection.comparator = function(object) {
+                return object.get("name");
+            };
+
             this.seafoodCollection.fetch();
         },
 
