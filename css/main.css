@@ -1,3 +1,45 @@
+#seafood-collection {
+    width: 40%;
+    float: left;
+}
+
+#seafood-info, #main-info {
+    width: 55%;
+    float: right;
+}
+
+#app.showSeafoodInfo #seafood-info {
+    display: block;
+}
+
+#app.showSeafoodInfo #main-info {
+    display: none;
+}
+
+@media (max-width: 767px) {
+
+    #app.showSeafoodInfo #seafood-info {
+        display: block;
+        margin-top: 0!important;
+    }
+
+    #app.showSeafoodInfo #seafood-collection {
+        display: none;
+    }
+
+    #seafood-collection {
+        width: 100%;
+        float: none;
+    }
+
+    #seafood-info, #main-info {
+        width: 100%;
+        float: none;
+        display: none;
+    }
+}
+
+
 #header {
     padding-top: 40px;
 }

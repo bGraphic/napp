@@ -1,6 +1,5 @@
 function showMainInfo() {
-    $("#main-info").show();
-    $("#seafood-info").hide();
+    $("#app").removeClass("showSeafoodInfo");
     $("#header h1").removeClass("activated");
 
     console.log("test");
@@ -19,8 +18,7 @@ function showSeafoodInfo() {
     else
         $("#seafood-info").css("margin-top", 0);
 
-    $("#main-info").hide();
-    $("#seafood-info").show();
+    $("#app").addClass("showSeafoodInfo");
     $("#header h1").addClass("activated");
 }
 
