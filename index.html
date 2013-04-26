@@ -3,140 +3,148 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
 
-        <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 
-        <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main.css">
 
-        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-        <![endif]-->
+    <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+</head>
+<body>
+<!--[if lt IE 7]>
+<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+<![endif]-->
 
-        <header id="header" class="page-header text-center">
-            <div class="container">
-                <h1 onclick="showMainInfo()">Grønt NAPP</h1>
-                <p class="lead">En (beta-)app fra <a href="http://marinbiologene.no">marinbiologene.no</a> og <a href="http://bgraphic.no">bGraphic</a>.</p>
+<header id="header" class="page-header text-center">
+    <div class="container">
+        <h1 onclick="showMainInfo()">Grønt NAPP</h1>
+        <p class="lead">En (beta-)app fra <a href="http://marinbiologene.no">marinbiologene.no</a> og <a href="http://bgraphic.no">bGraphic</a>.</p>
+    </div>
+</header>
+
+<div class="container">
+    <div class="row">
+        <div class="span5">
+
+            <ul id="seafood-collection" class="nav nav-tabs nav-stacked">
+                <li><img class="spinner" src="img/spinner.gif"></li>
+            </ul>
+
+        </div>
+        <div class="span7">
+            <div id="seafood-info">
+
             </div>
-        </header>
 
-        <div class="container">
-        <div class="row">
-            <div class="span5">
+            <div id="main-info">
 
-                <ul id="seafood-collection" class="nav nav-tabs nav-stacked">
-                    <li><img class="spinner" src="img/spinner.gif"></li>
-                </ul>
+                <article class="info well">
+                    <header>
+                        <h3>Om listen</h3>
+                    </header>
+                    <p>Listen er laget av Marinbiologene basert på en kombinasjon av WWFs sjømatguide og infromasjon fra ICES (Det internasjonale havforskerrådet) og MSC(Marine Stewardship Council).
+                    </p>
 
-            </div>
-            <div class="span7">
-                <div id="seafood-info" class="info well">
+                    <dl>
+                        <dt class="green">Grønn</dt>
+                        <dd>
+                            Disse artene høstes på en bærekraftig måte og kan spises med god samvittighet.
+                        </dd>
 
-                </div>
+                        <dt class="orange">Oransj</dt>
+                        <dd>
+                            Disse artene høstes stort sett på en bærekraftig måte. Fangstmetoder og områder kan være av betydning for miljøvennlighet. Se detaljopplysninger for arten.
+                        </dd>
 
-                <div id="main-info" class="info well">
-                    <article>
-                        <p class="lead">Skrive en kul intro tekst som forklarer hva dette er og hvorfor det er viktig!</p>
-                        <p>Skrive litt mer</p>
+                        <dt class="red">Rød</dt>
+                        <dd>
+                            Disse artene er sårbare for populasjonsreduksjoner eller høstes på en lite bærekraftig måte.
+                        </dd>
+                    </dl>
 
-                        <div>
-                            <h3>Om listen</h3>
+                    <p>Marinbiologene tar gjerne imot innspill og kommentarer til listen på: <a rel="external" href=" mailto:info@marinbiologene.no" class="ui-link">info@marinbiologene.no</a>.</p>
+                    <p>Send gjerne inn forslag til huskeregler også ;-)</p>
 
-                            <p>Listen er laget av Marinbiologene basert på en kombinasjon av WWFs sjømatguide og infromasjon fra ICES (Det internasjonale havforskerrådet) og MSC(Marine Stewardship Council).
-                            </p>
+                </article>
 
-                            <dl>
-                                <dt class="green">Grønn</dt>
-                                <dd>
-                                    Disse artene høstes på en bærekraftig måte og kan spises med god samvittighet.
-                                </dd>
+                <article class="info well">
+                    <header>
+                        <h3>Om marinbiologene</h3>
+                    </header>
+                    <p>Marinbiologene DA  er fullstendig uavhengig av både forskningsinstitusjoner og forvaltningsmyndigheter i Norge. </p>
+                    <p>Marinbiologene driver nettstedet <a rel="external" href="http://marinbiologene.no" class="ui-link">www.marinbiologene.no</a>. Nettstedet skal formidle informasjon om marinbiologi i Norge og fungere som en uavhengig og dynamisk plattform for publisering. </p>
+                    <p>Marinbiologene DA består av Marianne Olsen og Guri Sogn Andersen, som begge er marinbiologer utdannet ved Universitetet i Oslo. For mer info, besøk <a rel="external" href="http://marinbiologene.no" class="ui-link">www.marinbiologene.no</a>.
+                    </p>
+                </article>
 
-                                <dt class="orange">Oransj</dt>
-                                <dd>
-                                    Disse artene høstes stort sett på en bærekraftig måte. Fangstmetoder og områder kan være av betydning for miljøvennlighet. Se detaljopplysninger for arten.
-                                </dd>
-
-                                <dt class="red">Rød</dt>
-                                <dd>
-                                    Disse artene er sårbare for populasjonsreduksjoner eller høstes på en lite bærekraftig måte.
-                                </dd>
-                            </dl>
-
-                            <p>Marinbiologene tar gjerne imot innspill og kommentarer til listen på: <a rel="external" href=" mailto:info@marinbiologene.no" class="ui-link">info@marinbiologene.no</a>.</p>
-                            <p>Send gjerne inn forslag til huskeregler også ;-)</p>
-
-                        </div>
-                    </article>
-                </div>
             </div>
         </div>
-        </div>
+    </div>
+</div>
 
-        <!-- Template -->
+<!-- Template -->
 
-        <script id="seafoodItemTemplate" type="text/template">
-            <a class="<%= status %>"><%= name %> <span class="icon"><i class="icon-chevron-right"></i></span> </a>
-        </script>
+<script id="seafoodItemTemplate" type="text/template">
+    <a class="<%= status %>"><%= name %> <span class="icon"><i class="icon-chevron-right"></i></span> </a>
+</script>
 
-        <script id="seafoodInfoTemplate" type="text/template">
-            <button type="button" class="close">×</button>
+<script id="seafoodInfoTemplate" type="text/template">
+    <button type="button" class="close">×</button>
 
-            <header>
-                <h2><%= name %></h2>
-            </header>
+    <header>
+        <h2><%= name %></h2>
+    </header>
 
-            <blockquote>
-                <%= quote %>
-                <% if (quote_thanks) { %>
-                    <small><%= quote_thanks %></small>
-                <% } %>
-            </blockquote>
+    <blockquote>
+        <%= quote %>
+        <% if (quote_thanks) { %>
+        <small><%= quote_thanks %></small>
+        <% } %>
+    </blockquote>
 
-            <p>
-                <%= comment %>
-            </p>
+    <p>
+        <%= comment %>
+    </p>
 
-            <p>
-                <%= name %> er på den <%= status %> listen.
-            </p>
+    <p>
+        <%= name %> er på den <%= status %> listen.
+    </p>
 
-            <% if (env_status) { %>
-            <p>
-                <%= name %> er et <%= env_status %> klimavalg.
-            </p>
-            <% } %>
+    <% if (env_status) { %>
+    <p>
+        <%= name %> er et <%= env_status %> klimavalg.
+    </p>
+    <% } %>
 
-            <% if (img_src) { %>
-            <p>
-                <img src="http://napp.marinbiologene.no/images/art/<%= img_src %>" class="img-polaroid"/>
-            <p>
-            <% } %>
+    <% if (img_src) { %>
+    <p>
+        <img src="http://napp.marinbiologene.no/images/art/<%= img_src %>" class="img-polaroid"/>
+    <p>
+        <% } %>
 
-        </script>
+</script>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
 
-        <script src="js/vendor/bootstrap.min.js"></script>
-        <script type="text/javascript" src="http://underscorejs.org/underscore.js"></script>
-        <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.2.7.min.js"></script>
+<script src="js/vendor/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://underscorejs.org/underscore.js"></script>
+<script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.2.7.min.js"></script>
 
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
 
-        <script>
-            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)}(document,'script'));
-        </script>
-    </body>
+<script>
+    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+</body>
 </html>

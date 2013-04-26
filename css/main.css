@@ -38,6 +38,10 @@
     margin-right: -20px;
 }
 
+#main-info article {
+    margin-bottom: 30px;
+}
+
 .info.well {
     padding: 40px;
 }

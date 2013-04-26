@@ -64,6 +64,7 @@ $(function() {
 
     var SeafoodInfoView = Parse.View.extend({
         tagName: "article",
+        className: "info well",
 
         template: _.template($('#seafoodInfoTemplate').html()),
 
