@@ -2,7 +2,7 @@
     padding-top: 40px;
 }
 
-#header h1:hover {
+#header h1.activated:hover {
     cursor: pointer;
     opacity: .75;
 }
@@ -34,7 +34,7 @@
 }
 
 #seafood-info button.close {
-    margin-top: -40px;
+    margin-top: -10px;
     margin-right: -20px;
 }
 

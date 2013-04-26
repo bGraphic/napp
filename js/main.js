@@ -1,6 +1,9 @@
 function showMainInfo() {
     $("#main-info").show();
     $("#seafood-info").hide();
+    $("#header h1").removeClass("activated");
+
+    console.log("test");
 }
 
 function showSeafoodInfo() {
@@ -17,9 +20,13 @@ function showSeafoodInfo() {
         $("#seafood-info").css("margin-top", 0);
 
     $("#main-info").hide();
-
     $("#seafood-info").show();
+    $("#header h1").addClass("activated");
 }
+
+$('#header h1').click(function() {
+    showMainInfo();
+});
 
 $(function() {
 
