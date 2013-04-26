@@ -42,8 +42,12 @@
     margin-bottom: 30px;
 }
 
-.info.well {
-    padding: 40px;
+#main-info .btn {
+    margin-bottom: 10px;
+}
+
+.info {
+    padding: 20px 40px;
 }
 
 .red {
