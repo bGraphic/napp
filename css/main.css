@@ -32,13 +32,10 @@
     cursor: pointer;
 }
 
-#seafood-collection li .icon {
-    float: right;
-    opacity: 0.25;
-}
-
-#seafood-collection li .icon i {
-    vertical-align: middle;
+#seafood-collection li i {
+   vertical-align: baseline;
+   opacity: 0.25;
+   margin-right: 10px;
 }
 
 #seafood-collection li img.spinner {
