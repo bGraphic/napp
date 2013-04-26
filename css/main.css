@@ -30,6 +30,11 @@
         font-size: 1em;
     }
 
+    #app {
+        margin-left: -22px;
+        margin-right: -22px;
+    }
+
     #app.showSeafoodInfo #seafood-info {
         display: block;
         margin-top: 0!important;
