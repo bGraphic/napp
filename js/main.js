@@ -1,31 +1,3 @@
-function showMainInfo() {
-    $("#app").removeClass("showSeafoodInfo");
-    $("#header h1").removeClass("activated");
-
-    console.log("test");
-}
-
-function showSeafoodInfo() {
-    var scrollTop = $(window).scrollTop();
-    var headerHeight = $("#header").height()+
-        parseInt($("#header").css("margin-top")) +
-        parseInt($("#header").css("margin-bottom")) +
-        parseInt($("#header").css("padding-top")) +
-        parseInt($("#header").css("padding-bottom"));
-
-    if(scrollTop > headerHeight)
-        $("#seafood-info").css("margin-top", (scrollTop-headerHeight+parseInt($("#header").css("margin-bottom")))+"px");
-    else
-        $("#seafood-info").css("margin-top", 0);
-
-    $("#app").addClass("showSeafoodInfo");
-    $("#header h1").addClass("activated");
-}
-
-$('#header h1').click(function() {
-    showMainInfo();
-});
-
 $(function() {
 
     Parse.$ = jQuery;
@@ -60,30 +32,22 @@ $(function() {
                 model: this.model
             });
 
-            $("#seafood-info").html("");
-            $("#seafood-info").append(seafoodInfo.render().el);
+            if(this.$el.children("article.info").length == 0)
+                this.$el.append(seafoodInfo.render().el);
 
-            showSeafoodInfo();
+            this.$el.children("article.info").toggle();
         }
     });
 
     var SeafoodInfoView = Parse.View.extend({
         tagName: "article",
-        className: "info well",
+        className: "info",
 
         template: _.template($('#seafoodInfoTemplate').html()),
-
-        events: {
-            "click button" : "closeSeafoodInfo"
-        },
 
         render: function () {
             this.$el.html(this.template(this.model.toJSON()));
             return this;
-        },
-
-        closeSeafoodInfo: function () {
-            showMainInfo();
         }
 
     });

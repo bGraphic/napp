@@ -2,28 +2,17 @@
     padding-top: 40px;
 }
 
-#seafood-collection {
-    width: 40%;
-    float: left;
-}
 
-#seafood-info, #main-info {
-    width: 55%;
-    float: right;
-}
-
-#app.showSeafoodInfo #seafood-info {
-    display: block;
-}
-
-#app.showSeafoodInfo #main-info {
-    display: none;
+#app {
+    max-width: 800px;
 }
 
 @media (max-width: 767px) {
 
     #header {
         padding-top: 20px;
+        border: none;
+        margin-bottom: 0;
     }
 
     #header .lead {
@@ -34,31 +23,6 @@
         margin-left: -22px;
         margin-right: -22px;
     }
-
-    #app.showSeafoodInfo #seafood-info {
-        display: block;
-        margin-top: 0!important;
-    }
-
-    #app.showSeafoodInfo #seafood-collection {
-        display: none;
-    }
-
-    #seafood-collection {
-        width: 100%;
-        float: none;
-    }
-
-    #seafood-info, #main-info {
-        width: 100%;
-        float: none;
-        display: none;
-    }
-}
-
-#header h1.activated:hover {
-    cursor: pointer;
-    opacity: .75;
 }
 
 #seafood-collection li a {
@@ -83,25 +47,10 @@
     margin-top: 30px;
 }
 
-#seafood-info {
-    display: none;
-}
-
-#seafood-info button.close {
-    margin-top: -10px;
-    margin-right: -20px;
-}
-
-#main-info article {
-    margin-bottom: 30px;
-}
-
-#main-info .btn {
-    margin-bottom: 10px;
-}
-
-.info {
+#seafood-collection .info {
+    border: 1px solid #ddd;
     padding: 20px 40px;
+    display: none;
 }
 
 .red {
