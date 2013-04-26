@@ -1,3 +1,26 @@
+function showMainInfo() {
+    $("#main-info").show();
+    $("#seafood-info").hide();
+}
+
+function showSeafoodInfo() {
+    var scrollTop = $(window).scrollTop();
+    var headerHeight = $("#header").height()+
+        parseInt($("#header").css("margin-top")) +
+        parseInt($("#header").css("margin-bottom")) +
+        parseInt($("#header").css("padding-top")) +
+        parseInt($("#header").css("padding-bottom"));
+
+    if(scrollTop > headerHeight)
+        $("#seafood-info").css("margin-top", (scrollTop-headerHeight+parseInt($("#header").css("margin-bottom")))+"px");
+    else
+        $("#seafood-info").css("margin-top", 0);
+
+    $("#main-info").hide();
+
+    $("#seafood-info").show();
+}
+
 $(function() {
 
     Parse.$ = jQuery;
@@ -35,21 +58,7 @@ $(function() {
             $("#seafood-info").html("");
             $("#seafood-info").append(seafoodInfo.render().el);
 
-            var scrollTop = $(window).scrollTop();
-            var headerHeight = $("#header").height()+
-                parseInt($("#header").css("margin-top")) +
-                parseInt($("#header").css("margin-bottom")) +
-                parseInt($("#header").css("padding-top")) +
-                parseInt($("#header").css("padding-bottom"));
-
-            if(scrollTop > headerHeight)
-                $("#seafood-info").css("margin-top", (scrollTop-headerHeight+parseInt($("#header").css("margin-bottom")))+"px");
-            else
-                $("#seafood-info").css("margin-top", 0);
-
-            $("#main-info").hide();
-
-            $("#seafood-info").show();
+            showSeafoodInfo();
         }
     });
 
@@ -68,9 +77,7 @@ $(function() {
         },
 
         closeSeafoodInfo: function () {
-
-            $("#main-info").show();
-            $("#seafood-info").hide();
+            showMainInfo();
         }
 
     });
