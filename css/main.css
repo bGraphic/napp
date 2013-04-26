@@ -3,30 +3,12 @@
 }
 
 
-#app {
+.container {
     max-width: 800px;
 }
 
-@media (max-width: 767px) {
-
-    #header {
-        padding-top: 20px;
-        border: none;
-        margin-bottom: 0;
-    }
-
-    #header .lead {
-        font-size: 1em;
-    }
-
-    #app {
-        margin-left: -22px;
-        margin-right: -22px;
-    }
-}
-
 #seafood-collection li a {
-    line-height: 200%;
+    line-height: 250%;
     padding-left: 20px;
 
     cursor: pointer;
@@ -60,5 +42,23 @@
 
 .green {
     color: #468847;
+}
+
+@media (max-width: 767px) {
+
+    #header {
+        padding-top: 20px;
+        border: none;
+        margin-bottom: 0;
+    }
+
+    #header .lead {
+        font-size: 1em;
+    }
+
+    #app {
+        margin-left: -22px;
+        margin-right: -22px;
+    }
 }
 
