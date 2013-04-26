@@ -1,3 +1,7 @@
+#header {
+    padding-top: 40px;
+}
+
 #seafood-collection {
     width: 40%;
     float: left;
@@ -18,6 +22,14 @@
 
 @media (max-width: 767px) {
 
+    #header {
+        padding-top: 20px;
+    }
+
+    #header .lead {
+        font-size: 1em;
+    }
+
     #app.showSeafoodInfo #seafood-info {
         display: block;
         margin-top: 0!important;
@@ -37,11 +49,6 @@
         float: none;
         display: none;
     }
-}
-
-
-#header {
-    padding-top: 40px;
 }
 
 #header h1.activated:hover {
