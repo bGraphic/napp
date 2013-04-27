@@ -1,15 +1,28 @@
 # humanstxt.org/
 # The humans responsible & technology colophon
 
-# TEAM
 
-    <name> -- <role> -- <twitter>
+/* TEAM */
+Developer: Benedicte Raae
+Site: bGraphic.no
+Twitter: raae
+Location: Oslo, Norway
 
-# THANKS
+Marinbiolog: Guri Andersen
+Site: marinbiologene.no
+Twitter:
+Location: Oslo, Norway
 
-    <name>
+Marinbiolog: Marianne
+Site: marinbiologene.no
+Twitter:
+Location: Oslo, Norway
 
-# TECHNOLOGY COLOPHON
+/* THANKS */
 
-    HTML5, CSS3
-    jQuery, Modernizr
+
+
+/* SITE */
+Last update: YYYY/MM/DD
+Standards: HTML5, CSS3
+Components: backbone.js, jquery, parse.com
