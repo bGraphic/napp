@@ -81,10 +81,27 @@
     </p>
 
     <% if (img_src) { %>
+
+    <div class="image">
     <p>
         <img src="http://napp.marinbiologene.no/images/art/<%= img_src %>" class="img-polaroid"/>
+    </p>
+
     <p>
-        <% } %>
+        <small>
+            <% if (photographer && copyright) { %>
+                <%= photographer %> | <%= copyright %>
+            <% } else if (photographer) { %>
+                <%= photographer %>
+            <% } else if (copyright) { %>
+                <%= copyright %>
+            <% } %>
+        </small>
+    <p>
+    </div>
+
+    <% } %>
+
 
 </script>
 
