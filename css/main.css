@@ -1,6 +1,13 @@
 a {
     cursor: pointer;
-    text-decoration: underline;
+    color: inherit;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: none;
+    color: inherit;
+    opacity: 0.75;
 }
 
 #header {
@@ -21,13 +28,14 @@ a {
     max-width: 800px;
 }
 
-#seafood-collection li a.seafood {
+#seafood-collection li .seafood {
     line-height: 250%;
     padding-left: 20px;
-    text-decoration: none;
+    font-weight: normal;
+
 }
 
-#seafood-collection li i {
+#seafood-collection li .seafood i {
    vertical-align: baseline;
    opacity: 0.25;
    margin-right: 10px;
@@ -46,6 +54,16 @@ a {
     display: none;
 }
 
+#seafood-collection .info i {
+    vertical-align: super;
+    opacity: 0.8;
+    margin-left: -5px;
+}
+
+#seafood-collection .info a.more-info:hover i {
+    opacity: 0.75;
+}
+
 #seafood-collection .info .badges img {
     height: 70px;
 }
@@ -55,7 +73,7 @@ a {
 }
 
 .orange {
-    color: #c09853;
+    color: #cc6600;
 }
 
 .green {

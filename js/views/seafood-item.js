@@ -22,7 +22,7 @@ var SeafoodView = Parse.View.extend({
             this.$el.append(seafoodInfo.render().el);
 
         this.$el.children("article.info").toggle();
-        this.$el.find("i").toggleClass("icon-chevron-down");
-        this.$el.find("i").toggleClass("icon-chevron-right");
+        this.$el.find("li .seafood i").toggleClass("icon-chevron-down");
+        this.$el.find("li .seafood i").toggleClass("icon-chevron-right");
     }
 });
