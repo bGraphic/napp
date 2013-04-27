@@ -49,6 +49,28 @@
 
 </div>
 
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel">Klimavalg</h3>
+    </div>
+    <div class="modal-body">
+            <p>Klimavalgvurderingene er basert på Grønn Hverdags opplysninger om utslipp av klimagasser.</p>
+
+            <h4>Godt klimavalg</h4>
+            <p>Fangst og transport av disse artene er relativt klimavennlig</p>
+
+            <h4>Ok klimavalg</h4>
+            <p>Fangst og transport av disse artene er litt mindre klimavennlig </p>
+
+            <h4>Dårlig klimavalg</h4>
+            <p>Fangst og transport av disse artene er lite klimavennlig</p>
+    </div>
+    <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Tilbake til listen</button>
+    </div>
+</div>
+
 <!-- Template -->
 
 <script id="seafoodItemTemplate" type="text/template">
@@ -115,10 +137,9 @@
 <script id="seafoodEnvStatusGoodInfoTemplate" type="text/template">
     <p>
         <%= name %> er et
-        <a class="more-info"
-           data-toggle="popover"
-           title="Godt klimavalg"
-           data-content="<small>Fangst og transport av disse artene er relativt klimavennlig.</small>">
+        <a href="#myModal"
+           class="more-info"
+           data-toggle="modal">
 
             godt klimavalg.<i class="icon-info-sign"></i>
         </a>
@@ -128,10 +149,9 @@
 <script id="seafoodEnvStatusOkInfoTemplate" type="text/template">
     <p>
         <%= name %> er et
-        <a class="more-info"
-           data-toggle="popover"
-           title="Ok klimavalg"
-           data-content="<small>Fangst og transport av disse artene er litt mindre klimavennlig.</small>">
+        <a href="#myModal"
+           class="more-info"
+           data-toggle="modal">
 
             ok klimavalg.<i class="icon-info-sign"></i>
         </a>
@@ -141,10 +161,9 @@
 <script id="seafoodEnvStatusBadInfoTemplate" type="text/template">
     <p>
         <%= name %> er et
-        <a class="more-info"
-           data-toggle="popover"
-           title="Dårlig klimavalg"
-           data-content="<small>Fangst og transport av disse artene er lite klimavennlig.</small>">
+        <a href="#myModal"
+           class="more-info"
+           data-toggle="modal">
 
             dårlig klimavalg.<i class="icon-info-sign"></i>
         </a>
