@@ -20,6 +20,7 @@ $(function() {
 
     var Seafood = Parse.Object.extend("Seafood", {
 
+
     });
 
     var SeafoodCollection = Parse.Collection.extend({
@@ -69,6 +70,31 @@ $(function() {
         },
 
         viewHelpers: function () {
+            self = this;
+
+            this.model.set("krav", false);
+            this.model.set("msc", false);
+
+            var badges = this.model.get("badges");
+
+            if(badges) {
+                badges = badges.split(",");
+
+                if(badges instanceof Array) {
+                    _.each(badges, function (badge) {
+                        if(badge.trim() == "Krav")
+                            self.model.set("krav", true);
+                        if(badge.trim() == "MSC")
+                            self.model.set("msc", true);
+                    });
+                } else {
+                    if(badges.trim() == "Krav")
+                        self.model.set("krav", true);
+                    if(badges.trim() == "MSC")
+                        self.model.set("msc", true);
+                }
+            }
+
             var name = this.model.get("name");
 
             var status = this.model.get("status");

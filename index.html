@@ -80,6 +80,26 @@
         <%= env_status_text %>
     </p>
 
+
+    <% if (krav || msc) { %>
+    <div class="badges">
+        <p>Se etter disse merkene: </p>
+
+        <p>
+            <% if (krav) { %>
+                <img src="http://napp.marinbiologene.no/images/krav.jpg" />
+            <% } %>
+
+            <% if (msc) { %>
+                <img src="http://napp.marinbiologene.no/images/msc.jpg" />
+            <% } %>
+        </p>
+
+    </div>
+    <% } %>
+
+
+
     <% if (img_src) { %>
 
     <div class="image">
