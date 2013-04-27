@@ -1,7 +1,16 @@
 #header {
-    padding-top: 40px;
+    padding-top: 60px;
+    background-image: url(../app-icons/ios/Icon-72@2x.png);
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    padding-left: 190px;
+    padding-bottom: 15px;
+    margin-bottom: 23px;
 }
 
+#header .lead {
+    margin-bottom: 0;
+}
 
 .container {
     max-width: 800px;
@@ -46,10 +55,16 @@
 
 @media (max-width: 767px) {
 
-    #header {
-        padding-top: 20px;
-        border: none;
+    header.page-header {
         margin-bottom: 0;
+    }
+
+    #header {
+        padding-top: 160px;
+        padding-left: 0;
+        background-position: top center;
+        text-align: center;
+        border: none;
     }
 
     #header .lead {
