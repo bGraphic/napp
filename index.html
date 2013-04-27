@@ -80,7 +80,7 @@
            title="Grønn liste"
            data-content="<small>Disse artene høstes på en bærekraftig måte og kan spises med god samvittighet.</small>">
 
-            røde listen.
+            grønne listen.
         </a>
     </p>
 </script>
@@ -90,10 +90,10 @@
         <%= name %> er på den
         <a class="list-info orange"
            data-toggle="popover"
-           title="Grønn liste"
+           title="Oransj liste"
            data-content="<small>Disse artene høstes stort sett på en bærekraftig måte. Fangstmetoder og områder kan være av betydning for miljøvennlighet.</small>">
 
-            røde listen.
+            oransje listen.
         </a>
     </p>
 </script>
@@ -103,10 +103,56 @@
         <%= name %> er på den
         <a class="list-info red"
            data-toggle="popover"
-           title="Grønn liste"
+           title="Rød liste"
            data-content="<small>Disse artene er sårbare for populasjonsreduksjoner eller høstes på en lite bærekraftig måte.</small>">
 
             røde listen.
+        </a>
+    </p>
+</script>
+
+<script id="seafoodEnvStatusGoodInfoTemplate" type="text/template">
+    <p>
+        <%= name %> er et
+        <a class="env-info green"
+           data-toggle="popover"
+           title="Godt klimavalg"
+           data-content="<small>Fangst og transport av disse artene er relativt klimavennlig.</small>">
+
+            godt klimavalg.
+        </a>
+    </p>
+</script>
+
+<script id="seafoodEnvStatusOkInfoTemplate" type="text/template">
+    <p>
+        <%= name %> er et
+        <a class="env-info"
+           data-toggle="popover"
+           title="Ok klimavalg"
+           data-content="<small>Fangst og transport av disse artene er litt mindre klimavennlig.</small>">
+
+            ok klimavalg.
+        </a>
+    </p>
+</script>
+
+<script id="seafoodEnvStatusBadInfoTemplate" type="text/template">
+    <p>
+        <%= name %> er et
+        <a class="env-info"
+           data-toggle="popover"
+           title="Dårlig klimavalg"
+           data-content="<small>Fangst og transport av disse artene er lite klimavennlig.</small>">
+
+            dårlig klimavalg.
+        </a>
+    </p>
+</script>
+
+<script id="seafoodEnvStatusNoneInfoTemplate" type="text/template">
+    <p>
+        <%= name %> mangler klimainformasjon.
         </a>
     </p>
 </script>
