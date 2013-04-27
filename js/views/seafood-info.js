@@ -25,6 +25,7 @@ var SeafoodStatusInfoView = Parse.View.extend({
 
 var SeafoodEnvStatusInfoView = Parse.View.extend({
     tagName: "div",
+    className: "badges",
 
     initialize: function() {
 
@@ -49,25 +50,31 @@ var SeafoodEnvStatusInfoView = Parse.View.extend({
 
 });
 
-var SeafoodEnvInfoView = Parse.View.extend({
+var SeafoodBadgesView = Parse.View.extend({
     tagName: "div",
+    className: "badges",
 
-    initialize: function() {
-
-        this.configureTemplate(this.options.model.get("status"));
-    },
-
-    configureTemplate: function(status) {
-        if(status == "green")
-            this.template = _.template($('#seafoodStatusGreenInfoTemplate').html());
-        else if(status == "orange")
-            this.template = _.template($('#seafoodStatusOrangeInfoTemplate').html());
-        else
-            this.template = _.template($('#seafoodStatusRedInfoTemplate').html());
-    },
+    template: _.template($('#seafoodBadgesInfoTemplate').html()),
 
     render: function () {
-        this.$el.html(this.template(this.model.toJSON()));
+        if(this.model.has("badges")) {
+            this.$el.html(this.template(this.model.toJSON()));
+        }
+
+        return this;
+    }
+
+});
+
+var SeafoodPictureView = Parse.View.extend({
+    tagName: "div",
+    className: "picture",
+
+    template: _.template($('#seafoodPictureInfoTemplate').html()),
+
+    render: function () {
+        if(this.model.has("img_src"))
+            this.$el.html(this.template(this.model.toJSON()));
         return this;
     }
 
@@ -100,6 +107,21 @@ var SeafoodInfoView = Parse.View.extend({
 
         this.$el.append(envStatusView.render().el);
 
+        var badgesView = new SeafoodBadgesView({
+            model: this.model
+        });
+
+        badgesView.model = this.model;
+
+        this.$el.append(badgesView.render().el);
+
+        var pictureView = new SeafoodPictureView({
+            model: this.model
+        });
+
+        pictureView.model = this.model;
+
+        this.$el.append(pictureView.render().el);
 
         return this;
     }
