@@ -24,7 +24,7 @@ $(function() {
         template: _.template($('#seafoodItemTemplate').html()),
 
         events: {
-            "click a" : "viewSeafoodInfo"
+            "click a.seafood" : "viewSeafoodInfo"
         },
 
         render: function () {
@@ -53,7 +53,40 @@ $(function() {
 
         template: _.template($('#seafoodInfoTemplate').html()),
 
+        initialize: function () {
+            var self = this;
+
+            _.bindAll(this, 'viewHelpers');
+
+        },
+
+        viewHelpers: function () {
+            var name = this.model.get("name");
+
+            var status = this.model.get("status");
+            if(status == "green")
+                this.model.set("status_text", name + " er på den <a class='green'>grønne</a> listen.");
+            else if (status == "orange")
+                this.model.set("status_text", name + " er på den <a class='orange'>orange</a> listen.");
+            else if (status == "red")
+                this.model.set("status_text", name + " er på den <a class='red'>røde listen.</a>");
+            else
+                this.model.set("status_text", "Mangler listeklassifisering " + name);
+
+            var env_status = this.model.get("env_status");
+            if(env_status == "smil")
+                this.model.set("env_status_text", name + " er et godt klimavalg.");
+            else if (env_status == "ok")
+                this.model.set("env_status_text", name + " er et ok klimavalg.");
+            else if (env_status == "sur")
+                this.model.set("env_status_text", name + " er et dårlig klimavalg");
+            else
+                this.model.set("env_status_text", "Ingen klimainformasjon om " + name);
+        },
+
+
         render: function () {
+            this.viewHelpers();
             this.$el.html(this.template(this.model.toJSON()));
             return this;
         }

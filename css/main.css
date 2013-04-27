@@ -16,7 +16,7 @@
     max-width: 800px;
 }
 
-#seafood-collection li a {
+#seafood-collection li a.seafood {
     line-height: 250%;
     padding-left: 20px;
 

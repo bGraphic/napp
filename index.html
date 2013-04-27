@@ -52,7 +52,7 @@
 <!-- Template -->
 
 <script id="seafoodItemTemplate" type="text/template">
-    <a class="<%= status %>"><i class="icon-chevron-right"></i><%= name %></a>
+    <a class="seafood <%= status %>"><i class="icon-chevron-right"></i><%= name %></a>
 </script>
 
 <script id="seafoodInfoTemplate" type="text/template">
@@ -73,14 +73,12 @@
     </p>
 
     <p>
-        <%= name %> er på den <%= status %> listen.
+        <%= status_text %>
     </p>
 
-    <% if (env_status) { %>
     <p>
-        <%= name %> er et <%= env_status %> klimavalg.
+        <%= env_status_text %>
     </p>
-    <% } %>
 
     <% if (img_src) { %>
     <p>
