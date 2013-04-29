@@ -6,9 +6,14 @@ var AppRouter = Parse.Router.extend({
     },
 
     home: function() {
-        this.seafoodCollection = new SeafoodCollection();
-        this.directoryView = new SeafoodDirectoryView({model: this.seafoodCollection});
-        this.batchRetrieve(0);
+
+        if(!this.seafoodCollection) {
+            console.log("seafood colletion");
+
+            this.seafoodCollection = new SeafoodCollection();
+            this.directoryView = new SeafoodDirectoryView({model: this.seafoodCollection});
+            this.batchRetrieve(0);
+        }
 
         $("article.info").hide();
         $(".seafood i").removeClass("icon-chevron-down");
@@ -19,8 +24,11 @@ var AppRouter = Parse.Router.extend({
 
         this.selectedKey = seafoodKey;
 
-        if(!this.seafoodCollection)
+        if(!this.seafoodCollection) {
             this.home();
+
+            console.log("home ");
+        }
         else
             this.openSelectedSeafood(false);
     },

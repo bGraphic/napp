@@ -10,6 +10,10 @@ a:hover {
     opacity: 0.75;
 }
 
+a:hover #header{
+    opacity: 0.9;
+}
+
 #header {
     padding-top: 60px;
     background-image: url(../app-icons/ios/Icon-72@2x.png);
