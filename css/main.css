@@ -14,6 +14,10 @@ a:hover #header{
     opacity: 0.9;
 }
 
+.page-header {
+    font-size: 120%;
+}
+
 #header {
     padding-top: 60px;
     background-image: url(../app-icons/ios/Icon-72@2x.png);
@@ -24,8 +28,13 @@ a:hover #header{
     margin-bottom: 23px;
 }
 
+#header h1 {
+    font-size: 49.5px;
+}
+
 #header .lead {
     margin-bottom: 0;
+    font-size: 27px;
 }
 
 .container {
@@ -34,6 +43,7 @@ a:hover #header{
 
 #seafood-collection li .seafood {
     line-height: 250%;
+    font-size: 130%;
     padding-left: 20px;
     font-weight: normal;
 
