@@ -116,4 +116,9 @@ a:hover #header{
         margin-left: -22px;
         margin-right: -22px;
     }
+
+    #seafood-collection .info {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }
