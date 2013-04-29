@@ -34,5 +34,29 @@ var Seafood = Parse.Object.extend("Seafood", {
 });
 
 var SeafoodCollection = Parse.Collection.extend({
-    model: Seafood
+    model: Seafood,
+
+    initialize: function() {
+        _.bindAll(this, 'getByKey');
+    },
+
+    getByKey: function(key) {
+
+        var mySeafood;
+
+        this.each(function (seafood) {
+                console.log(seafood.get("name"));
+                console.log(seafood.get("key"));
+
+                if(seafood.get("key").trim() == key.trim()) {
+                    console.log("Found: " + seafood.get("name"));
+                    mySeafood = seafood;
+                }
+            }
+        );
+
+        return mySeafood;
+    }
+
+
 });

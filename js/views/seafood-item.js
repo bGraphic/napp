@@ -4,7 +4,7 @@ var SeafoodView = Parse.View.extend({
     template: _.template($('#seafoodItemTemplate').html()),
 
     events: {
-        "click a.seafood" : "viewSeafoodInfo"
+        "click a.seafood" : "toggleSeafoodInfo"
     },
 
     render: function () {
@@ -12,17 +12,12 @@ var SeafoodView = Parse.View.extend({
         return this;
     },
 
-    viewSeafoodInfo: function () {
+    toggleSeafoodInfo: function () {
 
-        var seafoodInfo = new SeafoodInfoView({
-            model: this.model
-        });
-
-        if(this.$el.children("article.info").length == 0)
-            this.$el.append(seafoodInfo.render().el);
-
-        this.$el.children("article.info").toggle();
-        this.$el.find(".seafood i").toggleClass("icon-chevron-down");
-        this.$el.find(".seafood i").toggleClass("icon-chevron-right");
+        if(this.$el.children("article.info")) {
+            this.$el.children("article.info").toggle();
+            this.$el.find(".seafood i").toggleClass("icon-chevron-down");
+            this.$el.find(".seafood i").toggleClass("icon-chevron-right");
+        }
     }
 });
