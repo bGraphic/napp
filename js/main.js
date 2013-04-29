@@ -1,8 +1,20 @@
-
-
 function hideSeafoodCollectionSpinner() {
     $("#seafood-spinner").hide();
 }
+
+
+var Router = Parse.Router.extend({
+
+    routes: {
+        "":                 "home",
+        ":seafoodKey":   "contact"
+    },
+
+    home: function() {
+        var directory = new SeafoodDirectoryView();
+    }
+
+});
 
 
 $(function() {
@@ -16,6 +28,7 @@ $(function() {
 
     Parse.initialize("zdothuhw5y2TiDtKyOb20IHIAcWDIRuZwnCVjHIf", "o4vTVCro9Rwr7RbbKa8FTzVFwBOM1CipFDBBi9C2");
 
-    var directory = new SeafoodDirectoryView();
+    var router = new Router();
+    Parse.history.start();
 
 });

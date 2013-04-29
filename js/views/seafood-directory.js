@@ -12,6 +12,8 @@ var SeafoodDirectoryView = Parse.View.extend({
 
         this.batchRetrieve(0);
 
+        console.log("init");
+
     },
 
     batchRetrieve: function (startIndex) {
