@@ -1,4 +1,4 @@
-var SeafoodView = Parse.View.extend({
+var SeafoodListItemView = Parse.View.extend({
     tagName: "li",
 
     template: _.template($('#seafoodItemTemplate').html()),

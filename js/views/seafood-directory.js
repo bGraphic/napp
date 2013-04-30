@@ -25,7 +25,7 @@ var SeafoodDirectoryView = Parse.View.extend({
     },
 
     addOneSeafood: function (seafood) {
-        var seafoodView = new SeafoodView({
+        var seafoodView = new SeafoodListItemView({
             model: seafood
         });
         this.$el.append(seafoodView.render().el);

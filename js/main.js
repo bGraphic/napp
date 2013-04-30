@@ -8,8 +8,6 @@ var AppRouter = Parse.Router.extend({
     home: function() {
 
         if(!this.seafoodCollection) {
-            console.log("seafood colletion");
-
             this.seafoodCollection = new SeafoodCollection();
             this.directoryView = new SeafoodDirectoryView({model: this.seafoodCollection});
             this.batchRetrieve(0);
@@ -26,8 +24,6 @@ var AppRouter = Parse.Router.extend({
 
         if(!this.seafoodCollection) {
             this.home();
-
-            console.log("home ");
         }
         else
             this.openSelectedSeafood(false);
