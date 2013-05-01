@@ -52,8 +52,8 @@ var SeafoodListItemView = Parse.View.extend({
 
         if(this.$el.children("article.info")) {
             this.$el.children("article.info").toggle();
-            this.$el.find(".seafood i").toggleClass("icon-chevron-down");
-            this.$el.find(".seafood i").toggleClass("icon-chevron-right");
+            this.$el.find(".seafood i.chevron").toggleClass("icon-chevron-down");
+            this.$el.find(".seafood i.chevron").toggleClass("icon-chevron-right");
         }
     }
 });

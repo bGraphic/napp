@@ -25,12 +25,14 @@ header {
 
 #header {
     padding-top: 60px;
-    background-image: url(../app-icons/ios/Icon-72@2x.png);
+    background-image: url(../img/napp-icon_header.png);
     background-position: left bottom;
     background-repeat: no-repeat;
-    padding-left: 190px;
+    margin-left: -30px;
+    padding-left: 220px;
     padding-bottom: 15px;
     margin-bottom: 23px;
+    background-size: 206px 145px;
 }
 
 #header h1 {
@@ -61,13 +63,31 @@ ul#seafood-collection li .seafood {
     font-size: 130%;
     padding-left: 20px;
     font-weight: normal;
-
 }
 
-ul#seafood-collection li .seafood i {
-   vertical-align: baseline;
-   opacity: 0.25;
-   margin-right: 10px;
+ul#seafood-collection li .seafood i.chevron {
+    vertical-align: baseline;
+    opacity: 0.25;
+    margin-right: 10px;
+    margin-left: 10px;
+    float: right;
+    margin-top: 20px;
+}
+
+ul#seafood-collection li .seafood {
+    background-image: url(../img/napp-icon_maybe.png);
+    background-repeat: no-repeat;
+    background-position: 15px center;
+    padding-left: 70px;
+    background-size: 40px 56px;
+}
+
+ul#seafood-collection li .seafood.green {
+    background-image: url(../img/napp-icon_yes.png);
+}
+
+ul#seafood-collection li .seafood.red {
+    background-image: url(../img/napp-icon_no.png);
 }
 
 #seafood-spinner {
@@ -97,17 +117,32 @@ ul#seafood-collection .info .badges img {
     height: 70px;
 }
 
-.red {
-    color: #b94a48;
+@media (min--moz-device-pixel-ratio: 1.5),
+(-o-min-device-pixel-ratio: 3/2),
+(-webkit-min-device-pixel-ratio: 1.5),
+(min-device-pixel-ratio: 1.5),
+(min-resolution: 144dpi),
+(min-resolution: 1.5dppx) {
+
+    #header {
+        background-image: url(../img/napp-icon@2x_header.png);
+    }
+
+    ul#seafood-collection li .seafood {
+        background-image: url(../img/napp-icon@2x_maybe.png);
+    }
+
+    ul#seafood-collection li .seafood.green {
+        background-image: url(../img/napp-icon@2x_yes.png);
+    }
+
+    ul#seafood-collection li .seafood.red {
+        background-image: url(../img/napp-icon@2x_no.png);
+    }
+
 }
 
-.orange {
-    color: #cc6600;
-}
 
-.green {
-    color: #468847;
-}
 
 @media (max-width: 979px) and (min-width: 768px) {
     .navbar .container {

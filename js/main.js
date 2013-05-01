@@ -18,8 +18,8 @@ var AppRouter = Parse.Router.extend({
         this.batchRetrieve(0);
 
         $("article.info").hide();
-        $(".seafood i").removeClass("icon-chevron-down");
-        $(".seafood i").addClass("icon-chevron-right");
+        $(".seafood i.chevron").removeClass("icon-chevron-down");
+        $(".seafood i.chevron").addClass("icon-chevron-right");
     },
 
     seafood: function(seafoodKey) {
@@ -50,8 +50,8 @@ var AppRouter = Parse.Router.extend({
             $el.append(seafoodInfoView.render().el);
 
         $el.children("article.info").show();
-        $el.find(".seafood i").addClass("icon-chevron-down");
-        $el.find(".seafood i").removeClass("icon-chevron-right");
+        $el.find(".seafood i.chevron").addClass("icon-chevron-down");
+        $el.find(".seafood i.chevron").removeClass("icon-chevron-right");
 
 
         if(scroll) {
