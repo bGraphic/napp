@@ -59,8 +59,7 @@ var SeafoodListItemView = Parse.View.extend({
 });
 
 var SeafoodSearchDirectoryView = Parse.View.extend({
-    tagName: "div",
-    id: "filter",
+    el: "#filter",
 
     template: _.template($('#seafoodSearchTemplate').html()),
 

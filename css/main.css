@@ -1,3 +1,7 @@
+body {
+    overflow-x: hidden;
+}
+
 a {
     cursor: pointer;
     color: inherit;
@@ -105,22 +109,43 @@ ul#seafood-collection .info .badges img {
     color: #468847;
 }
 
+@media (max-width: 979px) and (min-width: 768px) {
+    .navbar .container {
+        width: 724px;
+    }
+}
+
 @media (max-width: 767px) {
 
-    header.page-header {
-        margin-bottom: 0;
+    header {
+        text-align: center;
     }
 
     #header {
         padding-top: 160px;
         padding-left: 0;
         background-position: top center;
-        text-align: center;
         border: none;
     }
 
     #header .lead {
         font-size: 1em;
+    }
+
+    .navbar {
+        margin-left: -25px;
+        margin-right: -25px;
+        margin-bottom: -1px;
+    }
+
+    .navbar #filter {
+        float: none;
+        text-align: center;
+    }
+
+    .navbar #filter input {
+        width: 90%;
+        text-align: center;
     }
 
     #app {
