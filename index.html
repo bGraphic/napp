@@ -84,7 +84,19 @@
 <!-- Template -->
 
 <script id="seafoodItemTemplate" type="text/template">
-    <a class="seafood <%= key %> <%= status %>" href="#<%= key %>"><%= name %><i class="chevron icon-chevron-right" /></a>
+    <a class="seafood <%= key %> <%= status %>" href="#<%= key %>"><%= name %>
+        <span>
+        <% if (status == 'green') { %>
+            - et godt valg
+        <% } else if (status == 'red') { %>
+            - et dårlig valg
+        <% } else { %>
+
+        <% } %>
+        </span>
+
+        <i class="chevron icon-chevron-right" />
+    </a>
 </script>
 
 <script id="seafoodSearchTemplate" type="text/template">

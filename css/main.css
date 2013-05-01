@@ -65,6 +65,11 @@ ul#seafood-collection li .seafood {
     font-weight: normal;
 }
 
+ul#seafood-collection li .seafood span {
+    opacity: 0.75;
+    font-size: 80%;
+}
+
 ul#seafood-collection li .seafood i.chevron {
     vertical-align: baseline;
     opacity: 0.25;
