@@ -11,7 +11,7 @@ var AppRouter = Parse.Router.extend({
 
         $("#app").html('<img id="seafood-spinner" src="img/spinner.gif">');
         $("#app").prepend(new SeafoodDirectoryView({model: this.seafoodCollection}).el);
-        $("#app").prepend(new SeafoodSearchDirectoryView({model: this.seafoodCollection}).el);
+        $("#app").prepend(new SeafoodSearchDirectoryView({model: this.seafoodCollection, app: this}).el);
 
         this.batchRetrieve(0);
 
@@ -81,9 +81,8 @@ var AppRouter = Parse.Router.extend({
                 if(results.length == limit)
                     self.batchRetrieve(startIndex+limit);
                 else {
-                    $("#seafood-spinner").hide();
-                    $("#app .search").removeClass("muted");
                     self.openSelectedSeafood(true);
+                    $("#seafood-spinner").remove();
                 }
             },
             error: function(error) {
@@ -101,6 +100,7 @@ $(function() {
         html: true,
         placement: 'top'
     });
+
 
     Parse.$ = jQuery;
 

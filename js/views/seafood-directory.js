@@ -1,11 +1,12 @@
 var SeafoodDirectoryView = Parse.View.extend({
     tagName: "ul",
-    className: "seafood-collection nav nav-tabs nav-stacked",
+    id: "seafood-collection",
+    className: "nav nav-tabs nav-stacked",
 
     initialize: function () {
         var self = this;
 
-        _.bindAll(this, 'addSeafoods', 'addOneSeafood', 'resetSeafoods' );
+        _.bindAll(this, 'addSeafoods', 'addOneSeafood', 'resetSeafoods');
 
         this.model.bind("add", this.addSeafoods);
         this.model.bind("reset", this.resetSeafoods);
@@ -20,9 +21,9 @@ var SeafoodDirectoryView = Parse.View.extend({
 
     },
 
-    resetSeafoods: function () {
+    resetSeafoods: function (newCollection) {
         this.$el.html("");
-        this.model.seafoodCollection.each(this.addOneSeafood);
+        newCollection.each(this.addOneSeafood);
     },
 
     addOneSeafood: function (seafood) {
@@ -59,12 +60,42 @@ var SeafoodListItemView = Parse.View.extend({
 
 var SeafoodSearchDirectoryView = Parse.View.extend({
     tagName: "div",
-    className: "search muted",
+    id: "search",
+    className: "input-prepend",
 
     template: _.template($('#seafoodSearchTemplate').html()),
 
+    events: {
+        'keyup' : 'filterCollection'
+    },
+
     initialize:function () {
+        _.bindAll(this, 'filterCollection');
+
+        this.app = this.options.app;
         this.render();
+
+    },
+
+    filterCollection: function () {
+        var filter = this.$el.find("input").val();
+
+        if(!this.originalSeafoodCollection)
+            this.originalSeafoodCollection = new SeafoodCollection().reset(this.model.toJSON())
+
+        if(filter.trim() != "")
+            this.model.reset(this.originalSeafoodCollection.filterByString(filter).toJSON());
+        else
+            this.model.reset(this.originalSeafoodCollection.toJSON());
+
+        if(this.model.length == 1) {
+
+            console.log("length == 1");
+            this.app.selectedKey = this.model.at(0).get("key");
+            this.app.openSelectedSeafood(false);
+        }
+
+
     },
 
     render: function () {
