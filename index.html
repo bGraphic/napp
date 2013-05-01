@@ -59,28 +59,6 @@
 
 </div>
 
-<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-        <h3 id="myModalLabel">Klimavalg</h3>
-    </div>
-    <div class="modal-body">
-            <p>Klimavalgvurderingene er basert på Grønn Hverdags opplysninger om utslipp av klimagasser.</p>
-
-            <h4>Godt klimavalg</h4>
-            <p>Fangst og transport av disse artene er relativt klimavennlig</p>
-
-            <h4>Ok klimavalg</h4>
-            <p>Fangst og transport av disse artene er litt mindre klimavennlig </p>
-
-            <h4>Dårlig klimavalg</h4>
-            <p>Fangst og transport av disse artene er lite klimavennlig</p>
-    </div>
-    <div class="modal-footer">
-        <button class="btn" data-dismiss="modal" aria-hidden="true">Tilbake til listen</button>
-    </div>
-</div>
-
 <!-- Template -->
 
 <script id="seafoodItemTemplate" type="text/template">
@@ -124,79 +102,22 @@
     </p>
 </script>
 
-<script id="seafoodStatusGreenInfoTemplate" type="text/template">
-    <p>
-        <%= name %> er på den
-        <a class="more-info green"
-           data-toggle="popover"
-           title="Grønn liste"
-           data-content="<small>Disse artene høstes på en bærekraftig måte og kan spises med god samvittighet.</small>">
-
-            grønne listen.<i class="icon-info-sign"></i>
-        </a>
-    </p>
-</script>
-
-<script id="seafoodStatusOrangeInfoTemplate" type="text/template">
-    <p>
-        <%= name %> er på den
-        <a class="more-info orange"
-           data-toggle="popover"
-           title="Oransj liste"
-           data-content="<small>Disse artene høstes stort sett på en bærekraftig måte. Fangstmetoder og områder kan være av betydning for miljøvennlighet.</small>">
-
-            oransje listen.<i class="icon-info-sign"></i>
-
-        </a>
-    </p>
-</script>
-
-<script id="seafoodStatusRedInfoTemplate" type="text/template">
-    <p>
-        <%= name %> er på den
-        <a class="more-info red"
-           data-toggle="popover"
-           title="Rød liste"
-           data-content="<small>Disse artene er sårbare for populasjonsreduksjoner eller høstes på en lite bærekraftig måte.</small>">
-
-            røde listen.<i class="icon-info-sign"></i>
-        </a>
-    </p>
-</script>
-
-<script id="seafoodEnvStatusGoodInfoTemplate" type="text/template">
+<script id="seafoodEnvStatusInfoTemplate"  type="text/template">
     <p>
         <%= name %> er et
-        <a href="#myModal"
-           class="more-info"
-           data-toggle="modal">
-
-            godt klimavalg.<i class="icon-info-sign"></i>
-        </a>
-    </p>
-</script>
-
-<script id="seafoodEnvStatusOkInfoTemplate" type="text/template">
-    <p>
-        <%= name %> er et
-        <a href="#myModal"
-           class="more-info"
-           data-toggle="modal">
-
-            ok klimavalg.<i class="icon-info-sign"></i>
-        </a>
-    </p>
-</script>
-
-<script id="seafoodEnvStatusBadInfoTemplate" type="text/template">
-    <p>
-        <%= name %> er et
-        <a href="#myModal"
-           class="more-info"
-           data-toggle="modal">
-
-            dårlig klimavalg.<i class="icon-info-sign"></i>
-        </a>
+        <strong>
+        <% if (env_status == "smil") { %>
+            godt klimavalg.
+        <% } else if (env_status == "ok") { %>
+            ok klimavalg.
+        <% } else if (env_status == "sur") { %>
+            dårlig klimvalg.
+        <% } %>
+        </strong>
+        <br/>
+        <small>
+        - Basert på Grønn Hverdags opplysninger om utslipp av klimagasser.
+        </small>
     </p>
 </script>
 
@@ -208,8 +129,11 @@
 </script>
 
 <script id="seafoodBadgesInfoTemplate" type="text/template">
-
+        <% if (krav && msc) { %>
         <p>Se etter disse merkene: </p>
+        <% } else if (krav || msc) { %>
+        <p>Se etter dette merket: </p>
+        <% } %>
 
         <p>
             <% if (krav) { %>
