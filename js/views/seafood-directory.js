@@ -60,8 +60,7 @@ var SeafoodListItemView = Parse.View.extend({
 
 var SeafoodSearchDirectoryView = Parse.View.extend({
     tagName: "div",
-    id: "search",
-    className: "input-prepend",
+    id: "filter",
 
     template: _.template($('#seafoodSearchTemplate').html()),
 
@@ -101,6 +100,7 @@ var SeafoodSearchDirectoryView = Parse.View.extend({
     render: function () {
 
         this.$el.html(this.template());
+
 
         return this;
     }

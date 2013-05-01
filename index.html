@@ -30,7 +30,7 @@
 <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
 <![endif]-->
 
-<header class="page-header">
+<header>
 
     <div class="container">
         <a href="/">
@@ -44,6 +44,16 @@
     </div>
 
 </header>
+
+<div class="navbar">
+    <div class="navbar-inner">
+        <div class="container">
+            <div id="filter" class="pull-left">
+
+            </div>
+        </div>
+    </div>
+</div>
 
 <div id="app" class="container">
 
@@ -79,8 +89,9 @@
 
 <script id="seafoodSearchTemplate" type="text/template">
 
-    <span class="add-on">Søk</span>
-    <input type="text" class="input-large" autofocus placeholder="etter sjømat">
+    <form id="filter-search" class="navbar-search pull-left">
+        <input type="text" class="search-query" placeholder="Søk etter sjømat">
+    </form>
 
 </script>
 

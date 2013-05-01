@@ -14,8 +14,9 @@ a:hover #header{
     opacity: 0.9;
 }
 
-.page-header {
+header {
     font-size: 120%;
+    margin-bottom: 15px;
 }
 
 #header {
@@ -41,13 +42,14 @@ a:hover #header{
     max-width: 800px;
 }
 
-#search {
-    margin-bottom: 30px;
+.navbar {
+    margin-left: -5px;
+    margin-right: -5px;
 }
 
-#search .add-on {
-    padding-left: 10px;
-    padding-right: 10px;
+.navbar .navbar-inner {
+    min-height: 50px;
+    padding-top: 10px;
 }
 
 ul#seafood-collection li .seafood {

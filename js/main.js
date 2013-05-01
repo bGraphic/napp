@@ -9,9 +9,11 @@ var AppRouter = Parse.Router.extend({
 
         this.seafoodCollection = new SeafoodCollection();
 
+        this.searchView =
+
         $("#app").html('<img id="seafood-spinner" src="img/spinner.gif">');
         $("#app").prepend(new SeafoodDirectoryView({model: this.seafoodCollection}).el);
-        $("#app").prepend(new SeafoodSearchDirectoryView({model: this.seafoodCollection, app: this}).el);
+        $("#filter").append(new SeafoodSearchDirectoryView({model: this.seafoodCollection, app: this}).el);
 
         this.batchRetrieve(0);
 
@@ -51,8 +53,6 @@ var AppRouter = Parse.Router.extend({
         $el.find(".seafood i").addClass("icon-chevron-down");
         $el.find(".seafood i").removeClass("icon-chevron-right");
 
-        var viewTop			= $(window).scrollTop();
-        var viewBottom		= viewTop + $(window).height();
 
         if(scroll) {
 
@@ -100,7 +100,6 @@ $(function() {
         html: true,
         placement: 'top'
     });
-
 
     Parse.$ = jQuery;
 
