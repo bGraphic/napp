@@ -63,7 +63,6 @@ header {
 }
 
 ul#seafood-collection li .seafood {
-    line-height: 250%;
     font-size: 130%;
     font-weight: normal;
 
@@ -75,6 +74,9 @@ ul#seafood-collection li .seafood {
 
     padding-left: 70px;
     padding-right: 40px;
+
+    padding-top: 30px;
+    padding-bottom: 20px;
 
     background-size: 40px 56px;
 }
@@ -90,22 +92,17 @@ ul#seafood-collection li .seafood.red {
 ul#seafood-collection li .seafood span {
     opacity: 0.75;
     font-size: 80%;
+
+    display: inline-block;
 }
 
 ul#seafood-collection li .seafood i.chevron {
     position: absolute;
-    top: 29px;
+    top: 50%;
     right: 15px;
+    margin-top: -2px;
 
     opacity: 0.25;
-
-}
-
-#seafood-spinner {
-    display: block;
-    margin: auto;
-    margin-top: 30px;
-    margin-bottom: 20px;
 }
 
 ul#seafood-collection .info {
@@ -220,5 +217,10 @@ ul#seafood-collection .info .badges img {
     #seafood-collection .info {
         padding-left: 20px;
         padding-right: 20px;
+    }
+
+    ul#seafood-collection li .seafood span {
+        clear: both;
+        display: block;
     }
 }
