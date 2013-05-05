@@ -19,7 +19,7 @@ a:hover #header{
     opacity: 0.9;
 }
 
-header {
+header.page {
     font-size: 120%;
     margin-bottom: 15px;
 }
@@ -125,6 +125,14 @@ ul#seafood-collection .info .badges img {
     height: 70px;
 }
 
+#seafood-spinner {
+    display: block;
+    margin: auto;
+
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
 @media (min--moz-device-pixel-ratio: 1.5),
 (-o-min-device-pixel-ratio: 3/2),
 (-webkit-min-device-pixel-ratio: 1.5),
@@ -160,7 +168,7 @@ ul#seafood-collection .info .badges img {
 
 @media (max-width: 767px) {
 
-    header {
+    header.page {
         text-align: center;
     }
 
