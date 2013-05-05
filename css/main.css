@@ -65,29 +65,17 @@ header {
 ul#seafood-collection li .seafood {
     line-height: 250%;
     font-size: 130%;
-    padding-left: 20px;
     font-weight: normal;
-}
 
-ul#seafood-collection li .seafood span {
-    opacity: 0.75;
-    font-size: 80%;
-}
+    position: relative;
 
-ul#seafood-collection li .seafood i.chevron {
-    vertical-align: baseline;
-    opacity: 0.25;
-    margin-right: 10px;
-    margin-left: 10px;
-    float: right;
-    margin-top: 20px;
-}
-
-ul#seafood-collection li .seafood {
     background-image: url(../img/napp-icon_maybe.png);
     background-repeat: no-repeat;
     background-position: 15px center;
+
     padding-left: 70px;
+    padding-right: 40px;
+
     background-size: 40px 56px;
 }
 
@@ -97,6 +85,20 @@ ul#seafood-collection li .seafood.green {
 
 ul#seafood-collection li .seafood.red {
     background-image: url(../img/napp-icon_no.png);
+}
+
+ul#seafood-collection li .seafood span {
+    opacity: 0.75;
+    font-size: 80%;
+}
+
+ul#seafood-collection li .seafood i.chevron {
+    position: absolute;
+    top: 29px;
+    right: 15px;
+
+    opacity: 0.25;
+
 }
 
 #seafood-spinner {
