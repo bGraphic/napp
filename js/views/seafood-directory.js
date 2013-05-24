@@ -82,7 +82,7 @@ var SeafoodSearchDirectoryView = Parse.View.extend({
             this.originalSeafoodCollection = new SeafoodCollection().reset(this.model.toJSON())
 
         if(filter.trim() != "")
-            this.model.reset(this.originalSeafoodCollection.filterByString(filter).toJSON());
+            this.model.reset(this.originalSeafoodCollection.filterByString(filter));
         else
             this.model.reset(this.originalSeafoodCollection.toJSON());
 
@@ -92,14 +92,11 @@ var SeafoodSearchDirectoryView = Parse.View.extend({
             this.app.selectedKey = this.model.at(0).get("key");
             this.app.openSelectedSeafood(false);
         }
-
-
     },
 
     render: function () {
 
         this.$el.html(this.template());
-
 
         return this;
     }

@@ -9,8 +9,6 @@ var AppRouter = Parse.Router.extend({
 
         this.seafoodCollection = new SeafoodCollection();
 
-        this.searchView =
-
         $("#app").html('<img id="seafood-spinner" src="img/spinner.gif">');
         $("#app").prepend(new SeafoodDirectoryView({model: this.seafoodCollection}).el);
         $("#filter").append(new SeafoodSearchDirectoryView({model: this.seafoodCollection, app: this}).el);
