@@ -1,7 +1,5 @@
 var SeafoodDirectoryView = Parse.View.extend({
-    tagName: "ul",
-    id: "seafood-collection",
-    className: "nav nav-tabs nav-stacked",
+    el: "#seafood-collection",
 
     initialize: function () {
         var self = this;

@@ -3,6 +3,10 @@
     padding-top: 30px;
 }
 
+#info {
+    display: none;
+}
+
 a {
     cursor: pointer;
     color: inherit;
