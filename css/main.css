@@ -1,10 +1,23 @@
 #app {
     overflow-x: hidden;
     padding-top: 30px;
+    padding-bottom: 50px;
 }
 
 #info {
     display: none;
+}
+
+article.social .btn {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 20px;
+}
+
+article.social header {
+    margin-top: 30px;
+    margin-bottom: 20px;
 }
 
 a {
@@ -181,7 +194,7 @@ ul#seafood-collection .info .badges img {
         text-align: center;
     }
 
-    header .container {
+    header .container, #info.container {
         padding: 0 20px;
     }
 

@@ -14,11 +14,11 @@ var AppRouter = Parse.Router.extend({
 
     seafoodCollection: function() {
         $("#seafood-collection").show();
-        $("#info").hide();
+        $("#info-page").hide();
     },
 
     info: function() {
-        $("#info").show();
+        $("#info-page").show();
         $("#seafood-collection").hide();
     },
 
