@@ -3,7 +3,8 @@ var AppView = Parse.View.extend({
     el: "#app",
 
     events: {
-        'keyup' : 'filterCollection'
+        'keyup' : 'filterCollection',
+        'click #clearFilter': 'clearFilter'
     },
 
     initialize: function() {
@@ -16,7 +17,10 @@ var AppView = Parse.View.extend({
         $(".seafood i.chevron").addClass("icon-chevron-right");
     },
 
-    resetFilter: function() {
+    clearFilter: function() {
+
+        var filter = this.$el.find("input").val("");
+        this.$el.find("button").attr("disabled", "disabled");
 
         if(this.originalSeafoodCollection)
             this.collection.reset(this.originalSeafoodCollection.toJSON());
@@ -25,13 +29,15 @@ var AppView = Parse.View.extend({
     filterCollection: function () {
         var filter = this.$el.find("input").val();
 
+        this.$el.find("button").removeAttr("disabled");
+
         if(!this.originalSeafoodCollection)
             this.originalSeafoodCollection = new SeafoodCollection().reset(this.collection.toJSON())
 
         if(filter.trim() != "")
             this.collection.reset(this.originalSeafoodCollection.filterByString(filter));
         else
-            this.resetFilter();
+            this.clearFilter();
 
         if(this.collection.length == 1) {
 
