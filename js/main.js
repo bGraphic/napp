@@ -13,7 +13,6 @@ var AppRouter = Parse.Router.extend({
         this.appView.selectedKey = seafoodKey;
 
         this.batchRetrieve(0);
-
     },
 
     seafood: function(seafoodKey) {
@@ -71,6 +70,9 @@ $(function() {
     Parse.initialize("zdothuhw5y2TiDtKyOb20IHIAcWDIRuZwnCVjHIf", "o4vTVCro9Rwr7RbbKa8FTzVFwBOM1CipFDBBi9C2");
 
     var app = new AppRouter();
+
     Parse.history.start();
+
+
 
 });

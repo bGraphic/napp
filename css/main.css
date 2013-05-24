@@ -1,4 +1,4 @@
-body {
+#app {
     overflow-x: hidden;
     padding-top: 30px;
 }
@@ -168,8 +168,17 @@ ul#seafood-collection .info .badges img {
 
 @media (max-width: 767px) {
 
+    #app {
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+
     header.page {
         text-align: center;
+    }
+
+    header .container {
+        padding: 0 20px;
     }
 
     #header {
@@ -184,27 +193,16 @@ ul#seafood-collection .info .badges img {
         font-size: 1em;
     }
 
-    .navbar, #app {
-        margin-left: -20px;
-        margin-right: -20px;
-    }
-
-    .navbar #filter {
-        float: none;
+    form#filter {
         text-align: center;
     }
 
-    .navbar #filter input {
-        width: 90%;
-        text-align: center;
-    }
-
-    #app .nav-tabs.nav-stacked>li>a {
+    #seafood-collection.nav-tabs.nav-stacked>li>a {
         border-left: none;
         border-right: none;
     }
 
-    #app .nav-tabs.nav-stacked>li:first-child>a {
+    #seafood-collection.nav-tabs.nav-stacked>li:first-child>a {
         -webkit-border-top-right-radius: 0;
         -moz-border-radius-topright: 0;
         border-top-right-radius: 0;
@@ -213,7 +211,7 @@ ul#seafood-collection .info .badges img {
         border-top-left-radius: 0;
     }
 
-    #app .nav-tabs.nav-stacked>li:last-child>a {
+    #seafood-collection.nav-tabs.nav-stacked>li:last-child>a {
         -webkit-border-bottom-right-radius: 0;
         -moz-border-radius-bottomright: 0;
         border-bottom-right-radius: 0;

@@ -21,6 +21,7 @@ var AppView = Parse.View.extend({
 
         var filter = this.$el.find("input").val("");
         this.$el.find("button").attr("disabled", "disabled");
+        Parse.history.navigate("", false);
 
         if(this.originalSeafoodCollection)
             this.collection.reset(this.originalSeafoodCollection.toJSON());
@@ -40,8 +41,9 @@ var AppView = Parse.View.extend({
             this.clearFilter();
 
         if(this.collection.length == 1) {
-
             this.selectedKey = this.collection.at(0).get("key");
+            Parse.history.navigate(this.selectedKey, false);
+
             this.openSelectedSeafood(false);
         }
     },
