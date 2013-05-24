@@ -57,19 +57,12 @@ var SeafoodCollection = Parse.Collection.extend({
 
     filterByString: function(filterString) {
 
-        var mySeafoods = new SeafoodCollection();
-        filterString = filterString.trim().toLowerCase();
+        return this.filter(function(seafood){
+            var name = seafood.get("name").trim().toLowerCase();
+            filterString = filterString.trim().toLowerCase();
 
-        this.each(function (seafood) {
-                var name = seafood.get("name").trim().toLowerCase();
-
-                if(name.indexOf(filterString) > -1) {
-                    mySeafoods.add(seafood);
-                }
-            }
-        );
-
-        return mySeafoods;
+            return name.indexOf(filterString) > -1;
+        });
     }
 
 
