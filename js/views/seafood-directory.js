@@ -8,7 +8,6 @@ var SeafoodDirectoryView = Parse.View.extend({
 
         this.model.bind("add", this.addSeafoods);
         this.model.bind("reset", this.resetSeafoods);
-
     },
 
     addSeafoods: function (seafoods) {
@@ -28,7 +27,7 @@ var SeafoodDirectoryView = Parse.View.extend({
         var seafoodView = new SeafoodListItemView({
             model: seafood
         });
-        this.$el.append(seafoodView.render().el);
+        this.$el.find("ul").append(seafoodView.render().el);
     }
 });
 

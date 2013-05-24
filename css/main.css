@@ -4,7 +4,7 @@
     padding-bottom: 50px;
 }
 
-#info {
+#info-page {
     display: none;
 }
 
@@ -79,7 +79,7 @@ header.page {
     padding-top: 10px;
 }
 
-ul#seafood-collection li .seafood {
+#seafood-collection li .seafood {
     font-size: 130%;
     font-weight: normal;
 
@@ -98,22 +98,22 @@ ul#seafood-collection li .seafood {
     background-size: 40px 56px;
 }
 
-ul#seafood-collection li .seafood.green {
+#seafood-collection li .seafood.green {
     background-image: url(../img/napp-icon_yes.png);
 }
 
-ul#seafood-collection li .seafood.red {
+#seafood-collection li .seafood.red {
     background-image: url(../img/napp-icon_no.png);
 }
 
-ul#seafood-collection li .seafood span {
+#seafood-collection li .seafood span {
     opacity: 0.75;
     font-size: 80%;
 
     display: inline-block;
 }
 
-ul#seafood-collection li .seafood i.chevron {
+#seafood-collection li .seafood i.chevron {
     position: absolute;
     top: 50%;
     right: 15px;
@@ -122,23 +122,23 @@ ul#seafood-collection li .seafood i.chevron {
     opacity: 0.25;
 }
 
-ul#seafood-collection .info {
+#seafood-collection .info {
     border: 1px solid #ddd;
     padding: 20px 40px;
     display: none;
 }
 
-ul#seafood-collection .info i {
+#seafood-collection .info i {
     vertical-align: super;
     opacity: 0.8;
     margin-left: -5px;
 }
 
-ul#seafood-collection .info a.more-info:hover i {
+#seafood-collection .info a.more-info:hover i {
     opacity: 0.75;
 }
 
-ul#seafood-collection .info .badges img {
+#seafood-collection .info .badges img {
     height: 70px;
 }
 
@@ -161,15 +161,15 @@ ul#seafood-collection .info .badges img {
         background-image: url(../img/napp-icon@2x_header.png);
     }
 
-    ul#seafood-collection li .seafood {
+    #seafood-collection li .seafood {
         background-image: url(../img/napp-icon@2x_maybe.png);
     }
 
-    ul#seafood-collection li .seafood.green {
+    #seafood-collection li .seafood.green {
         background-image: url(../img/napp-icon@2x_yes.png);
     }
 
-    ul#seafood-collection li .seafood.red {
+    #seafood-collection li .seafood.red {
         background-image: url(../img/napp-icon@2x_no.png);
     }
 
@@ -214,12 +214,12 @@ ul#seafood-collection .info .badges img {
         text-align: center;
     }
 
-    #seafood-collection.nav-tabs.nav-stacked>li>a {
+    #seafood-collection ul.nav-tabs.nav-stacked>li>a {
         border-left: none;
         border-right: none;
     }
 
-    #seafood-collection.nav-tabs.nav-stacked>li:first-child>a {
+    #seafood-collection ul.nav-tabs.nav-stacked>li:first-child>a {
         -webkit-border-top-right-radius: 0;
         -moz-border-radius-topright: 0;
         border-top-right-radius: 0;
@@ -228,7 +228,7 @@ ul#seafood-collection .info .badges img {
         border-top-left-radius: 0;
     }
 
-    #seafood-collection.nav-tabs.nav-stacked>li:last-child>a {
+    #seafood-collection ul.nav-tabs.nav-stacked>li:last-child>a {
         -webkit-border-bottom-right-radius: 0;
         -moz-border-radius-bottomright: 0;
         border-bottom-right-radius: 0;

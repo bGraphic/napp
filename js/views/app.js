@@ -11,8 +11,6 @@ var AppView = Parse.View.extend({
     initialize: function() {
         $("#info").hide();
 
-        $("#main").html('<img id="seafood-spinner" src="img/spinner.gif">');
-
         this.seafoodCollectionView = new SeafoodDirectoryView({model: this.collection});
 
         $("article.info").hide();

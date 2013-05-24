@@ -53,7 +53,7 @@ var AppRouter = Parse.Router.extend({
                     self.batchRetrieve(startIndex+limit);
                 else {
                     self.appView.openSelectedSeafood(true);
-                    $("#seafood-spinner").remove();
+                    $("#seafood-spinner").hide();
                 }
             },
             error: function(error) {
