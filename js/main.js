@@ -5,59 +5,26 @@ var AppRouter = Parse.Router.extend({
         ":seafoodKey":   "seafood"
     },
 
-    home: function() {
+    home: function(seafoodKey) {
 
         this.seafoodCollection = new SeafoodCollection();
 
-        $("#app").html('<img id="seafood-spinner" src="img/spinner.gif">');
-        $("#app").prepend(new SeafoodDirectoryView({model: this.seafoodCollection}).el);
-        $("#filter").append(new SeafoodSearchDirectoryView({model: this.seafoodCollection, app: this}).el);
+        this.appView = new AppView({collection: this.seafoodCollection});
+        this.appView.selectedKey = seafoodKey;
 
         this.batchRetrieve(0);
 
-        $("article.info").hide();
-        $(".seafood i.chevron").removeClass("icon-chevron-down");
-        $(".seafood i.chevron").addClass("icon-chevron-right");
     },
 
     seafood: function(seafoodKey) {
 
-        this.selectedKey = seafoodKey;
-
         if(!this.seafoodCollection) {
-            this.home();
+            this.home(seafoodKey);
         }
-        else
-            this.openSelectedSeafood(false);
-    },
-
-    openSelectedSeafood: function(scroll) {
-
-        if(!this.selectedKey)
-            return;
-
-        var seafood = this.seafoodCollection.getByKey(this.selectedKey);
-
-        var seafoodInfoView = new SeafoodInfoView({
-            model: seafood
-        });
-
-        $el = $(".seafood."+this.selectedKey).parent();
-
-        if($el.children("article.info").length == 0)
-            $el.append(seafoodInfoView.render().el);
-
-        $el.children("article.info").show();
-        $el.find(".seafood i.chevron").addClass("icon-chevron-down");
-        $el.find(".seafood i.chevron").removeClass("icon-chevron-right");
-
-
-        if(scroll) {
-
-            $('html,body').animate({scrollTop: $el.offset().top});
+        else  {
+            this.appView.selectedKey = seafoodKey;
+            this.appView.openSelectedSeafood(false);
         }
-
-        this.selectedKey = null;
     },
 
     batchRetrieve: function (startIndex) {
@@ -79,7 +46,7 @@ var AppRouter = Parse.Router.extend({
                 if(results.length == limit)
                     self.batchRetrieve(startIndex+limit);
                 else {
-                    self.openSelectedSeafood(true);
+                    self.appView.openSelectedSeafood(true);
                     $("#seafood-spinner").remove();
                 }
             },

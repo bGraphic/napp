@@ -31,10 +31,11 @@
 <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
 <![endif]-->
 
+<div id="app">
 <header class="page">
 
     <div class="container">
-        <a href="/">
+        <a href="javascript:void(0)" id="home">
             <div id=header>
                 <h1>Grønt NAPP</h1>
                 <p class="lead">Spis bærekraftig sjømat med god samvittighet!</p>
@@ -50,13 +51,17 @@
     <div class="navbar-inner">
         <div class="container">
             <div id="filter" class="pull-left">
-
+                <form id="filter-search" class="navbar-form">
+                    <input type="text" class="search-query" placeholder="Søk etter sjømat">
+                </form>
             </div>
         </div>
     </div>
 </div>
 
-<div id="app" class="container">
+<div id="main" class="container">
+
+</div>
 
 </div>
 
@@ -76,14 +81,6 @@
 
         <i class="chevron icon-chevron-right" />
     </a>
-</script>
-
-<script id="seafoodSearchTemplate" type="text/template">
-
-    <form id="filter-search" class="navbar-form">
-        <input type="text" class="search-query" placeholder="Søk etter sjømat">
-    </form>
-
 </script>
 
 <script id="seafoodInfoTemplate" type="text/template">
@@ -176,10 +173,13 @@
 
 <script src="js/plugins.js"></script>
 
+
 <script src="js/models/seafood.js"></script>
 <script src="js/views/seafood-item.js"></script>
 <script src="js/views/seafood-directory.js"></script>
 <script src="js/views/seafood-info.js"></script>
+
+<script src="js/views/app.js"></script>
 
 <script src="js/main.js"></script>
 
