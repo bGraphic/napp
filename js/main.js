@@ -1,24 +1,31 @@
 var AppRouter = Parse.Router.extend({
 
     routes: {
-        "":                 "home",
+        "":                 "seafoodCollection",
+        "info":             "info",
         ":seafoodKey":   "seafood"
     },
 
-    home: function(seafoodKey) {
-
+    initialize: function() {
         this.seafoodCollection = new SeafoodCollection();
-
         this.appView = new AppView({collection: this.seafoodCollection});
-        this.appView.selectedKey = seafoodKey;
-
         this.batchRetrieve(0);
+    },
+
+    seafoodCollection: function() {
+        $("#seafood-collection").show();
+        $("#info-page").hide();
+    },
+
+    info: function() {
+        $("#info-page").show();
+        $("#seafood-collection").hide();
     },
 
     seafood: function(seafoodKey) {
 
         if(!this.seafoodCollection) {
-            this.home(seafoodKey);
+            this.appView.selectedKey = seafoodKey;
         }
         else  {
             this.appView.selectedKey = seafoodKey;

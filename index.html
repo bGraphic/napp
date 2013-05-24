@@ -35,7 +35,7 @@
 <header class="page">
 
     <div class="container">
-        <a href="/" id="home">
+        <a href="#" id="home">
             <div id=header>
                 <h1>Grønt NAPP</h1>
                 <p class="lead">Spis bærekraftig sjømat med god samvittighet!</p>
@@ -47,24 +47,108 @@
 
 </header>
 
-<div class="navbar">
-    <div class="navbar-inner">
-        <div class="container">
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="container">
 
-                <form id="filter" class="navbar-form">
+                <form id="filter" class="navbar-form pull-left">
                     <div class="input-append">
                         <input id="appendedInputButtons" type="text" placeholder="Søk etter sjømat">
                         <button class="btn" type="button" id="clearFilter" disabled="disabled">Nullstill søk</button>
                     </div>
                 </form>
 
+
+                <ul class="nav pull-right">
+                    <li><a href="#info">Info</a></li>
+                </ul>
+            </div>
         </div>
     </div>
-</div>
 
-<div id="main" class="container">
+    <div class="container">
+        <ul id="seafood-collection" class=" nav nav-tabs nav-stacked"></ul>
+    </div>
 
-</div>
+    <div id="info-page" class="container">
+
+        <article class="well">
+
+            <header>
+                <h2>
+                    Om fargekodingen
+                </h2>
+            </header>
+
+            <p>
+                Listen er laget av Marinbiologene basert på en kombinasjon av WWFs
+                sjømatguide og infromasjon fra ICES (Det internasjonale havforskerrådet)
+                og MSC(Marine Stewardship Council).
+            </p>
+
+            <dl>
+                <dt class="green">Grønn</dt>
+                <dd>
+                    Disse artene høstes på en bærekraftig måte og kan spises med god samvittighet.
+                </dd>
+
+                <dt class="orange">Oransj</dt>
+                <dd>
+                    Disse artene høstes stort sett på en bærekraftig måte.
+                    Fangstmetoder og områder kan være av betydning for miljøvennlighet.
+                    Se detaljopplysninger for arten.
+                </dd>
+
+                <dt class="red">Rød</dt>
+                <dd>
+                    Disse artene er sårbare for populasjonsreduksjoner eller høstes på en lite bærekraftig måte.
+                </dd>
+            </dl>
+
+            <p>
+                Marinbiologene tar gjerne imot innspill og kommentarer til listen på:
+                <a rel="external" href=" mailto:info@marinbiologene.no" class="ui-link">info@marinbiologene.no</a>.
+            </p>
+            <p>
+                Send gjerne inn forslag til huskeregler også ;-)
+            </p>
+        </article>
+
+        <article class="well">
+            <header>
+                <h2>Om Marinbiolgene</h2>
+            </header>
+
+            <p>
+                Marinbiologene er fullstendig uavhengig av både forskningsinstitusjoner og forvaltningsmyndigheter i Norge.
+            </p>
+            <p>
+                Marinbiologene driver nettstedet <a rel="external" href="http://marinbiologene.no">marinbiologene.no</a>.
+                Nettstedet skal formidle informasjon om marinbiologi i Norge og fungere som en uavhengig og dynamisk plattform
+                for publisering.
+            </p>
+            <p>
+                Marinbiologene består av Marianne Olsen og Guri Sogn Andersen,
+                som begge er marinbiologer utdannet ved Universitetet i Oslo.
+                For mer info, besøk <a rel="external" href="http://marinbiologene.no">marinbiologene.no</a>.
+            </p>
+        </article>
+
+        <article class="social">
+
+            <header>
+                <h2>Følg med på Marinbiologene</h2>
+            </header>
+
+            <div class="row-fluid">
+                <div class="span6"><a href="http://bit.ly/l8USnW" class="btn btn-primary btn-large">Twitter</a></div>
+                <div class="span6"><a href="http://on.fb.me/kPTl61" class="btn btn-primary btn-large">Facebook</a></div>
+            </div>
+
+            <a href="http://eepurl.com/dI_fA" class="btn btn-success btn-large">Abboner på nyhetsbrev</a>
+        </article>
+
+    </div>
 
 </div>
 
@@ -164,8 +248,6 @@
                 <% } %>
             </small>
         <p>
-
-
 </script>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>

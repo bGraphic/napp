@@ -3,28 +3,36 @@ var AppView = Parse.View.extend({
     el: "#app",
 
     events: {
-        'keyup' : 'filterCollection',
-        'click #clearFilter': 'clearFilter'
+        'focus input':           'selectedFilter',
+        'keyup' :               'filterCollection',
+        'click #clearFilter':        'clearFilter'
     },
 
     initialize: function() {
+        $("#info").hide();
 
         $("#main").html('<img id="seafood-spinner" src="img/spinner.gif">');
-        $("#main").prepend(new SeafoodDirectoryView({model: this.collection}).el);
+
+        this.seafoodCollectionView = new SeafoodDirectoryView({model: this.collection});
 
         $("article.info").hide();
         $(".seafood i.chevron").removeClass("icon-chevron-down");
         $(".seafood i.chevron").addClass("icon-chevron-right");
     },
 
+    selectedFilter: function() {
+        Parse.history.navigate("", true);
+    },
+
     clearFilter: function() {
 
         var filter = this.$el.find("input").val("");
         this.$el.find("button").attr("disabled", "disabled");
-        Parse.history.navigate("", false);
 
         if(this.originalSeafoodCollection)
             this.collection.reset(this.originalSeafoodCollection.toJSON());
+
+        Parse.history.navigate("", true);
     },
 
     filterCollection: function () {
