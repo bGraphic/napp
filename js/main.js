@@ -2,7 +2,9 @@ var AppRouter = Parse.Router.extend({
 
     routes: {
         "":                 "seafoodCollection",
-        "info":             "info",
+        "appen":                      "appInfo",
+        "klassifisering":           "classInfo",
+        "merking":                   "badgeInfo",
         ":seafoodKey":   "seafood"
     },
 
@@ -13,13 +15,37 @@ var AppRouter = Parse.Router.extend({
     },
 
     seafoodCollection: function() {
+        $('[id^="info-"]').hide();
         $("#seafood-collection").show();
-        $("#info-page").hide();
+        this.updateNavbar("seafood-collection");
     },
-
-    info: function() {
-        $("#info-page").show();
-        $("#seafood-collection").hide();
+    
+    info: function(infoToShow) {
+		$("#seafood-collection").hide();
+		$('[id^="info-"]').hide();
+		$("#"+infoToShow).show();
+		
+		this.updateNavbar(infoToShow);
+    },
+    
+    updateNavbar: function(activePage) {
+    	$(".navbar li").removeClass("active");
+    	$(".navbar li."+activePage).addClass("active");
+    	
+    	if(activePage.indexOf("info") > -1)
+    		$(".navbar li.info").addClass("active");
+    },
+    
+    appInfo: function() {
+		this.info("info-app");
+    },
+    
+    classInfo: function () {
+		this.info("info-class");    	
+    },
+    
+    badgeInfo: function () {
+		this.info("info-badges");    	    
     },
 
     seafood: function(seafoodKey) {

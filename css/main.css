@@ -5,7 +5,7 @@
 }
 
 
-#info-page {
+#info-app, #info-class, #info-badges, #seafood-collection {
     display: none;
 }
 
@@ -75,10 +75,10 @@ header.page {
     border-right: none;
 }
 
-.navbar .navbar-inner {
+/*.navbar .navbar-inner {
     min-height: 50px;
     padding-top: 10px;
-}
+}*/
 
 #seafood-collection li .seafood {
     font-size: 130%;
@@ -195,7 +195,7 @@ header.page {
         text-align: center;
     }
 
-    header .container, #info-page.container {
+    header .container, #info-app.container, #info-class.container, #info-badges.container {
         padding: 0 20px;
     }
 

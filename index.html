@@ -32,39 +32,58 @@
 <![endif]-->
 
 <div id="app">
-<header class="page">
-
-    <div class="container">
-        <a href="#" id="home">
-            <div id=header>
-                <h1>Grønt NAPP</h1>
-                <p class="lead">Spis bærekraftig sjømat med god samvittighet!</p>
-            </div>
-        </a>
-        <small class="pull-right">En app i beta fra <a href="http://marinbiologene.no">Marinbiologene</a> og <a href="http://bgraphic.no">bGraphic</a>.</small>
-
-    </div>
-
-</header>
+	<header class="page">
+	
+	    <div class="container">
+	        <a href="#" id="home">
+	            <div id=header>
+	                <h1>Grønt NAPP</h1>
+	                <p class="lead">Spis bærekraftig sjømat med god samvittighet!</p>
+	            </div>
+	        </a>
+	        <small class="pull-right">En app i beta fra <a href="http://marinbiologene.no">Marinbiologene</a> og <a href="http://bgraphic.no">bGraphic</a>.</small>
+	
+	    </div>
+	
+	</header>
 
     <div class="navbar">
         <div class="navbar-inner">
             <div class="container">
 
-                <form id="filter" class="navbar-form pull-left">
-                    <div class="input-append">
-                        <input id="appendedInputButtons" type="text" placeholder="Søk etter sjømat">
-                        <button class="btn" type="button" id="clearFilter" disabled="disabled">Nullstill søk</button>
-                    </div>
-                </form>
-
-
+                <ul class="nav">
+                    <li class="seafood-collection"><a href="#">Sjømatlisten</a></li>
+                    
+                    <li class="info-class hidden-phone"><a href="#klassifisering">Klassifisering</a></li>
+                    <li class="info-badges hidden-phone"><a href="#merking">Merking av sjømat</a></li>
+                </ul>
                 <ul class="nav pull-right">
-                    <li><a href="#info">Info</a></li>
+                    <li class="info dropdown visible-phone">
+                        <a class="dropdown-toggle" data-toggle="dropdown">
+                          Mer informasjon
+                          <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+							<li class="info-class"><a href="#klassifisering">om klassifisering</a></li>
+							<li class="info-badges"><a href="#merking">om merking av sjømat</a></li>
+		                    <li class="info-app"><a href="#appen">om appen</a></li>
+                        </ul>
+                      </li>
+                </ul>
+                
+                <ul class="nav pull-right hidden-phone">
+                    <li class="info-app"><a href="#appen">Om appen</a></li>
                 </ul>
             </div>
         </div>
     </div>
+    
+    <form id="filter" class="container">
+        <div class="input-append">
+            <input id="appendedInputButtons" type="text" placeholder="Søk etter sjømat">
+            <button class="btn" type="button" id="clearFilter" disabled="disabled">Nullstill søk</button>
+        </div>
+    </form>
 
     <div id="seafood-collection" class="container">
         <ul class=" nav nav-tabs nav-stacked">
@@ -72,18 +91,15 @@
 
         <img id="seafood-spinner" src="img/spinner.gif">
     </div>
-
-    <div id="info-page" class="container">
-
-        <article class="well">
-
-            <header>
-                <h2>
-                    Om fargeinndelingen
-                </h2>
-            </header>
-
-            <p>
+    
+    <div id="info-class" class="container">
+    	<article class="well">
+    		<header>
+    			<h2>Klassifisering av sjømat</h2>
+    		</header>
+    		
+    		<h3>Fargeinndeling</h3>
+ 			<p>
                 Listen er laget av Marinbiologene basert på en kombinasjon av WWFs
                 sjømatguide og infromasjon fra ICES (Det internasjonale havforskerrådet)
                 og MSC(Marine Stewardship Council).
@@ -115,12 +131,69 @@
             <p>
                 Send gjerne inn forslag til huskeregler også ;-)
             </p>
-        </article>
+            
+            <h3>Klimainformasjon</h3>
+            <p>
+            Klimavalgvurderingene er basert på Grønn Hverdags opplysninger om utslipp av klimagasser.
+            </p>
+            
+            <dl>
+            	<dt>Godt klimavalg</dt>
+            	<dd>
+	            	Fangst og transport av disse artene er relativt klimavennlig
+    			</dd>        
+	            <dt>Ok klimavalg</dt>
+    			<dd>        
+	            	Fangst og transport av disse artene er litt mindre klimavennlig
+	            </dd>
+            	<dt>Dårlig klimavalg</dt>            
+	            <dd>
+	            	Fangst og transport av disse artene er lite klimavennlig
+	           	</dd>
+			</dl>
+    		
+    	</article>
+    	
+    </div>
+    
+    <div id="info-badges" class="container">
+    	<article class="well">
+	    	<header>
+	    		<h2>Sjømatmerker</h2>
+	    	</header>
+	    	
+	      	<h3>Krav</h3>
+	      	<p>
+	      	<img src="http://napp.marinbiologene.no/images/krav.jpg" width="100px">
+	      	Krav er Sveriges mest kjente miljømerking for økologisk mat og miljøsertifiserer en hel rekke matprodukter. 
+	      	</p><p>Når det gjelder sjømat sertifiserer KRAV villfangede arter slik som norsk torsk, hyse, reker, sei og sild, samt økologisk oppdrettet laks, ørret og torsk. </p>
+	      	<p>KRAV-merket fisk oppfyller tre vilkår: Fisket skal være bærekraftig, utføres med skånsomme fiskeredskaper som minimerer sjansene for bifangst og skal være mulig å spore. Anbefalinger fra ICES (Det internasjonale havforskerrådet) blir fulgt.
+	      	</p>
+	      	
+	      	<h3>MSC (Marine Stewardship Council)</h3>
+	      	<p>
+	      	<img src="http://napp.marinbiologene.no/images/msc.jpg" width="100px">
+	      	MSC var det første miljømerket for villfanget fisk og ble opprettet i 1997 som et samarbeid mellom WWF og Unilever. MSC miljømerking bygger blant annet på 3 hovedprinsipper (oversatt og forkortet): 
+	      	</p>
+      		<ol>
+      		<li>Et fiskeri må forvaltes på en slik måte at hverken overfiske eller uttømming av fiskeressursene forekommer.</li>
+      		<li> Fiskeriet skal legge til rette for at strukturen, produksjonen, funksjonen og diversiteten til økosystemet opprettholdes.</li>
+      		<li>Fiskeriets forvalter/ansvarlig styre skal respektere lokale, nasjonale og internasjonale lover og retningslinjer og inkludere rammeverk som sørger for en ansvarsfull forvaltning og et bærekraftig fiskeri.</li>
+      		</ol>
+		</article>
+	</div>
+
+    <div id="info-app" class="container">
 
         <article class="well">
+
             <header>
-                <h2>Om Marinbiolgene</h2>
+                <h2>
+                	Grønt NAPP
+                </h2>
             </header>
+            
+            <p>Appen Grønr NAPP er et sammarbeid mellom Marinbiologene og <a href="http://bgraphic.no">bGraphic.</a></p>
 
             <p>
                 Marinbiologene er fullstendig uavhengig av både forskningsinstitusjoner og forvaltningsmyndigheter i Norge.
@@ -135,6 +208,7 @@
                 som begge er marinbiologer utdannet ved Universitetet i Oslo.
                 For mer info, besøk <a rel="external" href="http://marinbiologene.no">marinbiologene.no</a>.
             </p>
+            
         </article>
 
         <article class="social">
