@@ -9,6 +9,10 @@
     display: none;
 }
 
+#info-badges img {
+	margin: 10px;
+}
+
 article.social .btn {
     width: 100%;
     padding-left: 0;
