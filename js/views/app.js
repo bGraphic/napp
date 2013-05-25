@@ -5,7 +5,7 @@ var AppView = Parse.View.extend({
     events: {
         'focus input':           'selectedFilter',
         'keyup' :               'filterCollection',
-        'click #clearFilter':        'clearFilter'
+        'click #clearFilter': 'clickedClearFilter'
     },
 
     initialize: function() {
@@ -19,7 +19,15 @@ var AppView = Parse.View.extend({
     },
 
     selectedFilter: function() {
-        Parse.history.navigate("listen", true);
+        var filter = this.$el.find("input").val();
+        
+        if(filter.trim() == "")
+        	Parse.history.navigate("listen", true);
+        	
+    },
+    
+    clickedClearFilter: function () {
+    	Parse.history.navigate("listen", true);
     },
 
     clearFilter: function() {
@@ -29,8 +37,6 @@ var AppView = Parse.View.extend({
 
         if(this.originalSeafoodCollection)
             this.collection.reset(this.originalSeafoodCollection.toJSON());
-
-        Parse.history.navigate("listen", true);
     },
 
     filterCollection: function () {

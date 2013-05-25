@@ -20,9 +20,13 @@ var AppRouter = Parse.Router.extend({
         $("#seafood-collection").show();
     	$("#seafood-collection article.info").hide();
         this.updateNavbar("seafood-collection");
+        
+        this.appView.clearFilter();
     },
     
     info: function(infoToShow) {
+        this.appView.clearFilter();
+    
 		$("#seafood-collection").hide();
 		$('[id^="info-"]').hide();
 		$("#"+infoToShow).show();
