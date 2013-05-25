@@ -19,7 +19,7 @@ var AppView = Parse.View.extend({
     },
 
     selectedFilter: function() {
-        Parse.history.navigate("", true);
+        Parse.history.navigate("listen", true);
     },
 
     clearFilter: function() {
@@ -30,7 +30,7 @@ var AppView = Parse.View.extend({
         if(this.originalSeafoodCollection)
             this.collection.reset(this.originalSeafoodCollection.toJSON());
 
-        Parse.history.navigate("", true);
+        Parse.history.navigate("listen", true);
     },
 
     filterCollection: function () {

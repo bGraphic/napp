@@ -1,7 +1,8 @@
 var AppRouter = Parse.Router.extend({
 
     routes: {
-        "":                 "seafoodCollection",
+    	"":                       "seafoodCollection",
+        "listen":                 "seafoodCollection",
         "appen":                      "appInfo",
         "klassifisering":           "classInfo",
         "merking":                   "badgeInfo",
