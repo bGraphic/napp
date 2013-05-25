@@ -19,7 +19,7 @@ var SeafoodDirectoryView = Parse.View.extend({
     },
 
     resetSeafoods: function (newCollection) {
-        this.$el.html("");
+        this.$el.find("ul").html("");
         newCollection.each(this.addOneSeafood);
     },
 
