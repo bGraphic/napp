@@ -18,6 +18,7 @@ var AppRouter = Parse.Router.extend({
     seafoodCollectionView: function() {
         $('[id^="info-"]').hide();
         $("#seafood-collection").show();
+    	$("#seafood-collection article.info").hide();
         this.updateNavbar("seafood-collection");
     },
     
