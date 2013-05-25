@@ -1,8 +1,8 @@
 var AppRouter = Parse.Router.extend({
 
     routes: {
-    	"":                       "seafoodCollection",
-        "listen":                 "seafoodCollection",
+    	"":                       "seafoodCollectionView",
+        "listen":                 "seafoodCollectionView",
         "appen":                      "appInfo",
         "klassifisering":           "classInfo",
         "merking":                   "badgeInfo",
@@ -15,7 +15,7 @@ var AppRouter = Parse.Router.extend({
         this.batchRetrieve(0);
     },
 
-    seafoodCollection: function() {
+    seafoodCollectionView: function() {
         $('[id^="info-"]').hide();
         $("#seafood-collection").show();
         this.updateNavbar("seafood-collection");
@@ -51,7 +51,8 @@ var AppRouter = Parse.Router.extend({
 
     seafood: function(seafoodKey) {
 
-        if(!this.seafoodCollection) {
+        if(!$("#seafood-collection").is(":visible")) {
+        	this.seafoodCollectionView();
             this.appView.selectedKey = seafoodKey;
         }
         else  {
