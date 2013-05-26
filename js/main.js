@@ -12,8 +12,8 @@ var AppRouter = Parse.Router.extend({
     initialize: function() {
         this.seafoodCollection = new SeafoodCollection();
         
-        var seafoodCollectionView = new SeafoodDirectoryView(
-        	{model: this.seafoodCollection}
+        var seafoodCollectionView = new SeafoodDirectoryView({
+        	collection: this.seafoodCollection}
 		);
                 
         this.appView = new FilterView({
@@ -66,15 +66,9 @@ var AppRouter = Parse.Router.extend({
     },
 
     seafood: function(seafoodKey) {
-
-        if(!$("#seafood-collection").is(":visible")) {
-        	this.seafoodCollectionView();
-            this.appView.selectedKey = seafoodKey;
-        }
-        else  {
-            this.appView.selectedKey = seafoodKey;
-            this.appView.openSelectedSeafood(false);
-        }
+		this.seafoodCollection.selectedSeafoodKey = seafoodKey;
+		this.seafoodCollection.scrollToSlug = seafoodKey;
+		this.seafoodCollectionView();
     },
 
     batchRetrieve: function (startIndex) {
