@@ -11,14 +11,25 @@ var AppRouter = Parse.Router.extend({
 
     initialize: function() {
         this.seafoodCollection = new SeafoodCollection();
-        this.appView = new AppView({collection: this.seafoodCollection});
+        
+        var seafoodCollectionView = new SeafoodDirectoryView(
+        	{model: this.seafoodCollection}
+		);
+                
+        this.appView = new FilterView({
+        	collection: this.seafoodCollection
+        });
+        
         this.batchRetrieve(0);
     },
 
     seafoodCollectionView: function() {
         $('[id^="info-"]').hide();
         $("#seafood-collection").show();
-    	$("#seafood-collection article.info").hide();
+    	$("#seafood-collection article.info").hide();    
+    	$("#seafood-collection .seafood i.chevron").removeClass("icon-chevron-down");
+    	$("#seafood-collection .seafood i.chevron").addClass("icon-chevron-right");
+    	
         this.updateNavbar("seafood-collection");
         
         this.appView.clearFilter();

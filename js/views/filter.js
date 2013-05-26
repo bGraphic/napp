@@ -1,21 +1,11 @@
-var AppView = Parse.View.extend({
+var FilterView = Parse.View.extend({
 
-    el: "#app",
+    el: "#filter",
 
     events: {
         'focus input':           'selectedFilter',
         'keyup' :               'filterCollection',
         'click #clearFilter': 'clickedClearFilter'
-    },
-
-    initialize: function() {
-        $("#info").hide();
-
-        this.seafoodCollectionView = new SeafoodDirectoryView({model: this.collection});
-
-        $("article.info").hide();
-        $(".seafood i.chevron").removeClass("icon-chevron-down");
-        $(".seafood i.chevron").addClass("icon-chevron-right");
     },
 
     selectedFilter: function() {
