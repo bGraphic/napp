@@ -38,44 +38,28 @@ var FilterView = Parse.View.extend({
             this.originalSeafoodCollection = new SeafoodCollection().reset(this.collection.toJSON())
 
         if(filter.trim() != "")
-            this.collection.reset(this.originalSeafoodCollection.filterByString(filter));
+			var filteredCollection = this.originalSeafoodCollection.filterByString(filter);
+			
+			console.log(filteredCollection);
+			
+			if(filteredCollection.length == 1) {
+				var selectedSeafoodKey = filteredCollection[0].get("key");
+				
+				this.collection.selectedSeafoodKey= selectedSeafoodKey;
+				this.collection.scrollToSlug = false;
+				
+//				_gaq.push(['_trackEvent', 'Poison', 'Search', selectedPoisonSlug]);
+				
+				Parse.history.navigate(selectedSeafoodKey);
+			}
+			
+			if(filteredCollection.length == 0) {
+//				_gaq.push(['_trackEvent', 'Poison', 'Search', '_'+filter]);
+			}
+		
+		    this.collection.reset(filteredCollection);
+		}
         else
             this.clearFilter();
-
-        if(this.collection.length == 1) {
-            this.selectedKey = this.collection.at(0).get("key");
-            Parse.history.navigate(this.selectedKey, false);
-
-            this.openSelectedSeafood(false);
-        }
     },
-
-    openSelectedSeafood: function(scroll) {
-
-        if(!this.selectedKey)
-            return;
-
-        var seafood = this.collection.getByKey(this.selectedKey);
-
-        var seafoodInfoView = new SeafoodInfoView({
-            model: seafood
-        });
-
-        $el = $(".seafood."+this.selectedKey).parent();
-
-        if($el.children("article.info").length == 0)
-            $el.append(seafoodInfoView.render().el);
-
-        $el.children("article.info").show();
-        $el.find(".seafood i.chevron").addClass("icon-chevron-down");
-        $el.find(".seafood i.chevron").removeClass("icon-chevron-right");
-
-
-        if(scroll) {
-
-            $('html,body').animate({scrollTop: $el.offset().top});
-        }
-
-        this.selectedKey = null;
-    }
 });
