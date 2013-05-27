@@ -60,6 +60,8 @@ var SeafoodListItemView = Parse.View.extend({
     seafoodClicked: function () {
     
     	this.toggleSeafoodInfo();
+    	
+		_gaq.push(['_trackEvent', 'Seafoods', 'Open', this.model.get("key")]);
     },
 
     toggleSeafoodInfo: function () {

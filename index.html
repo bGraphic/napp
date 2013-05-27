@@ -53,10 +53,10 @@
             <div class="container">
 
                 <ul class="nav">
-                    <li class="seafood-collection"><a href="#listen">Sjømatlisten</a></li>
+                    <li class="seafood-collection"><a class="internal" href="#listen">Sjømatlisten</a></li>
                     
-                    <li class="info-class hidden-phone"><a href="#klassifisering">Klassifisering</a></li>
-                    <li class="info-badges hidden-phone"><a href="#merking">Merking av sjømat</a></li>
+                    <li class="info-class hidden-phone"><a class="internal" href="#klassifisering">Klassifisering</a></li>
+                    <li class="info-badges hidden-phone"><a class="internal" href="#merking">Merking av sjømat</a></li>
                 </ul>
                 <ul class="nav pull-right">
                     <li class="info dropdown visible-phone">
@@ -65,16 +65,16 @@
                           <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu">
-							<li class="info-class"><a href="#klassifisering">om klassifisering</a></li>
-							<li class="info-badges"><a href="#merking">om merking av sjømat</a></li>
+							<li class="info-class"><a class="internal" href="#klassifisering">om klassifisering</a></li>
+							<li class="info-badges"><a class="internal" href="#merking">om merking av sjømat</a></li>
 							<li class="divider"></li>
-		                    <li class="info-app"><a href="#appen">om appen</a></li>
+		                    <li class="info-app"><a class="internal" href="#appen">om appen</a></li>
                         </ul>
                       </li>
                 </ul>
                 
                 <ul class="nav pull-right hidden-phone">
-                    <li class="info-app"><a href="#appen">Om appen</a></li>
+                    <li class="info-app"><a class="internal" href="#appen">Om appen</a></li>
                 </ul>
             </div>
         </div>
@@ -128,7 +128,7 @@
 
             <p>
                 Marinbiologene tar gjerne imot innspill og kommentarer til listen på:
-                <a rel="external" href=" mailto:info@marinbiologene.no" class="ui-link">info@marinbiologene.no</a>.
+                <a class="external" href="mailto:info@marinbiologene.no" class="ui-link">info@marinbiologene.no</a>.
             </p>
             <p>
                 Send gjerne inn forslag til huskeregler også ;-)
@@ -195,20 +195,20 @@
                 </h2>
             </header>
             
-            <p>Appen Grønr NAPP er et sammarbeid mellom Marinbiologene og <a href="http://bgraphic.no">bGraphic.</a></p>
+            <p>Appen Grønr NAPP er et sammarbeid mellom Marinbiologene og <a class="external" href="http://bgraphic.no">bGraphic.</a></p>
 
             <p>
                 Marinbiologene er fullstendig uavhengig av både forskningsinstitusjoner og forvaltningsmyndigheter i Norge.
             </p>
             <p>
-                Marinbiologene driver nettstedet <a rel="external" href="http://marinbiologene.no">marinbiologene.no</a>.
+                Marinbiologene driver nettstedet <a class="external" href="http://marinbiologene.no">marinbiologene.no</a>.
                 Nettstedet skal formidle informasjon om marinbiologi i Norge og fungere som en uavhengig og dynamisk plattform
                 for publisering.
             </p>
             <p>
                 Marinbiologene består av Marianne Olsen og Guri Sogn Andersen,
                 som begge er marinbiologer utdannet ved Universitetet i Oslo.
-                For mer info, besøk <a rel="external" href="http://marinbiologene.no">marinbiologene.no</a>.
+                For mer info, besøk <a class="external" href="http://marinbiologene.no">marinbiologene.no</a>.
             </p>
             
         </article>
@@ -220,11 +220,11 @@
             </header>
 
             <div class="row-fluid">
-                <div class="span6"><a href="http://bit.ly/l8USnW" class="btn btn-primary btn-large">Twitter</a></div>
-                <div class="span6"><a href="http://on.fb.me/kPTl61" class="btn btn-primary btn-large">Facebook</a></div>
+                <div class="span6"><a href="https://twitter.com/marinbiologene" class="external btn btn-primary btn-large">Twitter</a></div>
+                <div class="span6"><a href="https://www.facebook.com/groups/103107709727700/" class="external btn btn-primary btn-large">Facebook</a></div>
             </div>
 
-            <a href="http://eepurl.com/dI_fA" class="btn btn-success btn-large">Abboner på nyhetsbrev</a>
+            <a href="http://eepurl.com/dI_fA" class="external btn btn-success btn-large">Abboner på nyhetsbrev</a>
         </article>
 
     </div>
@@ -329,6 +329,21 @@
         <p>
 </script>
 
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-40484634-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
 <script src="js/vendor/bootstrap.min.js"></script>
@@ -347,15 +362,5 @@
 
 <script src="js/main.js"></script>
 
-<script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-40484634-1', 'grontnapp.no');
-    ga('send', 'pageview');
-
-</script>
 </body>
 </html>

@@ -55,20 +55,28 @@ var AppRouter = Parse.Router.extend({
     
     appInfo: function() {
 		this.info("info-app");
+		
+		_gaq.push(['_trackEvent', 'Articles', 'Landing', "app-info"]); 
     },
     
     classInfo: function () {
 		this.info("info-class");    	
+		
+		_gaq.push(['_trackEvent', 'Articles', 'Landing', "class-info"]); 
     },
     
     badgeInfo: function () {
-		this.info("info-badges");    	    
+		this.info("info-badges");
+		
+		_gaq.push(['_trackEvent', 'Articles', 'Landing', "badges-info"]);    	    
     },
 
     seafood: function(seafoodKey) {
 		this.seafoodCollection.selectedSeafoodKey = seafoodKey;
 		this.seafoodCollection.scrollToSlug = seafoodKey;
 		this.seafoodCollectionView();
+		
+		_gaq.push(['_trackEvent', 'Seafoods', 'Landing', seafoodKey]);
     },
 
     batchRetrieve: function (startIndex) {
@@ -90,7 +98,6 @@ var AppRouter = Parse.Router.extend({
                 if(results.length == limit)
                     self.batchRetrieve(startIndex+limit);
                 else {
-                    self.appView.openSelectedSeafood(true);
                     $("#seafood-spinner").hide();
                 }
             },
@@ -117,6 +124,14 @@ $(function() {
     var app = new AppRouter();
 
     Parse.history.start();
+    
+    $('a.external').click(function(){
+    	_gaq.push(['_trackEvent', 'External Links', 'Click', $(this).attr('href')]);
+    });
+    
+    $('a.internal').click(function(){
+    	_gaq.push(['_trackEvent', 'Internal Links', 'Click', $(this).attr('href')]);
+    });
 
 
 

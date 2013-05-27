@@ -37,10 +37,8 @@ var FilterView = Parse.View.extend({
         if(!this.originalSeafoodCollection)
             this.originalSeafoodCollection = new SeafoodCollection().reset(this.collection.toJSON())
 
-        if(filter.trim() != "")
+        if(filter.trim() != "") {
 			var filteredCollection = this.originalSeafoodCollection.filterByString(filter);
-			
-			console.log(filteredCollection);
 			
 			if(filteredCollection.length == 1) {
 				var selectedSeafoodKey = filteredCollection[0].get("key");
@@ -48,13 +46,13 @@ var FilterView = Parse.View.extend({
 				this.collection.selectedSeafoodKey= selectedSeafoodKey;
 				this.collection.scrollToSlug = false;
 				
-//				_gaq.push(['_trackEvent', 'Poison', 'Search', selectedPoisonSlug]);
+				_gaq.push(['_trackEvent', 'Seafoods', 'Search', selectedSeafoodKey]);
 				
 				Parse.history.navigate(selectedSeafoodKey);
 			}
 			
 			if(filteredCollection.length == 0) {
-//				_gaq.push(['_trackEvent', 'Poison', 'Search', '_'+filter]);
+				_gaq.push(['_trackEvent', 'Seafoods', 'Search', '_'+filter]);
 			}
 		
 		    this.collection.reset(filteredCollection);
